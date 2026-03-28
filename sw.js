@@ -1,13 +1,24 @@
-const CACHE_NAME = 'ai4change-v2';
+const CACHE_NAME = 'ai4change-v3';
 const ASSETS = [
   '/',
   '/index.html',
   '/about.html',
   '/manifesto.html',
   '/problems.html',
+  '/join.html',
+  '/contributors.html',
+  '/404.html',
+  '/blog/',
+  '/blog/index.html',
+  '/blog/001-why-ai4change.html',
+  '/blog/002-first-five-problems.html',
   '/manifest.json',
   '/assets/logo.svg',
-  '/assets/favicon.svg'
+  '/assets/favicon.svg',
+  '/assets/hero-illustration.svg',
+  '/assets/icon-192.svg',
+  '/assets/icon-512.svg',
+  '/js/analytics.js'
 ];
 
 self.addEventListener('install', event => {

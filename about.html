@@ -8,12 +8,12 @@
     <meta property="og:title" content="About — AI4Change">
     <meta property="og:description" content="The story behind AI4Change — a global open-source movement inspired by Playing for Change, using AI to solve real problems together.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ai4change-org.github.io/about.html">
-    <meta property="og:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta property="og:url" content="https://ai4change.org/about.html">
+    <meta property="og:image" content="https://ai4change.org/assets/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About — AI4Change">
     <meta name="twitter:description" content="The story behind AI4Change — a global open-source movement inspired by Playing for Change, using AI to solve real problems together.">
-    <meta name="twitter:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta name="twitter:image" content="https://ai4change.org/assets/og-image.png">
     <meta name="twitter:site" content="@ai4changeorg">
     <meta name="theme-color" content="#00D4AA">
     <link rel="manifest" href="/manifest.json">
@@ -22,7 +22,7 @@
     <meta name="keywords" content="AI4Change, about, mission, open source, AI, social impact, Playing for Change, community">
     <meta name="author" content="AI4Change Contributors">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://ai4change-org.github.io/about.html">
+    <link rel="canonical" href="https://ai4change.org/about.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -34,16 +34,16 @@
         "@type": "AboutPage",
         "name": "About AI4Change",
         "description": "A global open-source movement inspired by Playing for Change, using AI to solve real problems together.",
-        "url": "https://ai4change-org.github.io/about.html",
+        "url": "https://ai4change.org/about.html",
         "isPartOf": {
             "@type": "WebSite",
             "name": "AI4Change",
-            "url": "https://ai4change-org.github.io"
+            "url": "https://ai4change.org"
         },
         "mainEntity": {
             "@type": "Organization",
             "name": "AI4Change",
-            "url": "https://ai4change-org.github.io",
+            "url": "https://ai4change.org",
             "founder": {
                 "@type": "Person",
                 "name": "Valter Silva",
@@ -187,8 +187,8 @@
         }
         .nav-links a:hover { color: #fff; }
         .nav-links a:hover::after { width: 100%; }
-        .nav-links a.active-link { color: var(--brand-primary); }
-        .nav-links a.active-link::after { width: 100%; }
+        .nav-links a.active { color: var(--brand-primary); }
+        .nav-links a.active::after { width: 100%; }
 
         .nav-cta {
             background: var(--gradient-glow) !important;
@@ -1123,6 +1123,26 @@
         [data-theme="light"] .footer-col h4 { color: var(--text); }
         [data-theme="light"] .status-upcoming { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.08); }
 
+        /* Skip to content */
+        .skip-to-content {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-glow);
+            color: var(--brand-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 12px 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 9999;
+            transition: top 0.3s;
+            text-decoration: none;
+        }
+        .skip-to-content:focus {
+            top: 0;
+        }
+
         /* ============================================================
            RESPONSIVE
            ============================================================ */
@@ -1168,15 +1188,17 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
     <!-- Particle Background -->
     <canvas id="particles-canvas"></canvas>
 
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
         <a href="/" class="nav-logo"><img src="/assets/favicon.svg" alt="" class="nav-logo-img" width="32" height="32">AI4Change</a>
         <div class="nav-links">
             <a href="/">Home</a>
-            <a href="/about.html" class="active-link">About</a>
+            <a href="/about.html" class="active">About</a>
             <a href="/manifesto.html">Manifesto</a>
             <a href="/problems.html">Problems</a>
             <a href="/blog/">Blog</a>
@@ -1202,6 +1224,7 @@
         <a href="/join.html" class="btn btn-primary" style="margin-top:1rem;">Get Involved</a>
     </div>
 
+    <main id="main-content">
     <!-- ============================================================
          HERO
          ============================================================ -->
@@ -1436,6 +1459,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- ============================================================
          FOOTER
          ============================================================ -->
@@ -1663,6 +1688,7 @@
         });
     }
     </script>
+    <script src="/js/analytics.js" defer></script>
 
 </body>
 </html>

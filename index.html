@@ -8,28 +8,28 @@
     <meta property="og:title" content="AI4Change — AI as the Great Equalizer">
     <meta property="og:description" content="Real people. Real problems. AI as the instrument. Open source solutions built by a global community.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ai4change-org.github.io">
-    <meta property="og:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta property="og:url" content="https://ai4change.org">
+    <meta property="og:image" content="https://ai4change.org/assets/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI4Change — AI as the Great Equalizer">
     <meta name="twitter:description" content="Real people. Real problems. AI as the instrument.">
     <meta name="theme-color" content="#00D4AA">
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-    <meta name="twitter:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta name="twitter:image" content="https://ai4change.org/assets/og-image.png">
     <meta name="twitter:site" content="@ai4changeorg">
     <meta name="keywords" content="AI, open source, social impact, community, artificial intelligence, global problems, playing for change, equalizer">
     <meta name="author" content="AI4Change Contributors">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://ai4change-org.github.io">
+    <link rel="canonical" href="https://ai4change.org">
     <link rel="apple-touch-icon" href="/assets/favicon.svg">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "AI4Change",
-      "url": "https://ai4change-org.github.io",
-      "logo": "https://ai4change-org.github.io/assets/logo.svg",
+      "url": "https://ai4change.org",
+      "logo": "https://ai4change.org/assets/logo.svg",
       "description": "A global open-source movement where real people use AI to solve humanity's most pressing problems.",
       "sameAs": [
         "https://github.com/ai4change-org",
@@ -1584,26 +1584,46 @@
             .involve-card { padding: 2rem 1.5rem; }
             .faq-question { padding: 1rem 1.25rem; font-size: 0.92rem; }
         }
+
+        /* Skip to content */
+        .skip-to-content {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-glow);
+            color: var(--brand-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 12px 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 9999;
+            transition: top 0.3s;
+            text-decoration: none;
+        }
+        .skip-to-content:focus {
+            top: 0;
+        }
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
 
     <!-- Particle Background -->
     <canvas id="particles-canvas"></canvas>
 
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
         <a href="/" class="nav-logo">AI4Change</a>
         <div class="nav-links">
             <a href="/about.html">About</a>
             <a href="/manifesto.html">Manifesto</a>
-            <a href="#how">How it Works</a>
             <a href="/problems.html">Problems</a>
+            <a href="/blog/">Blog</a>
+            <a href="/join.html">Join</a>
             <a href="/contributors.html">Contributors</a>
-            <a href="#faq">FAQ</a>
-            <a href="https://github.com/ai4change-org" target="_blank" rel="noopener">GitHub</a>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="theme-icon">&#9790;</span></button>
-            <a href="#involve" class="nav-cta">Join the Movement</a>
+            <a href="/join.html" class="nav-cta">Get Involved</a>
         </div>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
             <span></span><span></span><span></span>
@@ -1614,14 +1634,14 @@
     <div class="mobile-menu" id="mobileMenu">
         <a href="/about.html">About</a>
         <a href="/manifesto.html">Manifesto</a>
-        <a href="#how" onclick="closeMobile()">How it Works</a>
         <a href="/problems.html">Problems</a>
+        <a href="/blog/">Blog</a>
+        <a href="/join.html">Join</a>
         <a href="/contributors.html">Contributors</a>
-        <a href="#faq" onclick="closeMobile()">FAQ</a>
-        <a href="https://github.com/ai4change-org" target="_blank" rel="noopener">GitHub</a>
-        <a href="#involve" class="btn btn-primary" onclick="closeMobile()" style="margin-top:1rem;">Join the Movement</a>
+        <a href="/join.html" class="btn btn-primary" style="margin-top:1rem;">Get Involved</a>
     </div>
 
+    <main id="main-content">
     <!-- Hero -->
     <section class="hero" id="hero">
         <div class="hero-glow-1"></div>
@@ -2258,6 +2278,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer>
         <div class="footer-inner">
@@ -2271,9 +2293,9 @@
                     <li><a href="/about.html">About</a></li>
                     <li><a href="/manifesto.html">Manifesto</a></li>
                     <li><a href="/problems.html">Problems</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/join.html">Join</a></li>
                     <li><a href="/contributors.html">Contributors</a></li>
-                    <li><a href="/#how">How it Works</a></li>
-                    <li><a href="/#faq">FAQ</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -2537,6 +2559,7 @@
         });
     }
     </script>
+    <script src="/js/analytics.js" defer></script>
 
 </body>
 </html>

@@ -8,20 +8,21 @@
     <meta property="og:title" content="Problem Board — AI4Change">
     <meta property="og:description" content="Every solution starts with a problem worth solving. Browse, signal, and champion real-world problems with AI.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ai4change-org.github.io/problems.html">
-    <meta property="og:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta property="og:url" content="https://ai4change.org/problems.html">
+    <meta property="og:image" content="https://ai4change.org/assets/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Problem Board — AI4Change">
     <meta name="twitter:description" content="Every solution starts with a problem worth solving. Browse and champion real-world problems with AI.">
-    <meta name="twitter:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta name="twitter:image" content="https://ai4change.org/assets/og-image.png">
     <meta name="twitter:site" content="@ai4changeorg">
     <meta name="theme-color" content="#00D4AA">
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
     <meta name="keywords" content="AI, open source, social impact, community, problems, solutions, environment, health, education, agriculture, energy">
     <meta name="author" content="AI4Change Contributors">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://ai4change-org.github.io/problems.html">
+    <link rel="canonical" href="https://ai4change.org/problems.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,11 +34,11 @@
         "@type": "CollectionPage",
         "name": "AI4Change Problem Board",
         "description": "A community-driven board of real-world problems for the community to solve with AI and open source.",
-        "url": "https://ai4change-org.github.io/problems.html",
+        "url": "https://ai4change.org/problems.html",
         "isPartOf": {
             "@type": "WebSite",
             "name": "AI4Change",
-            "url": "https://ai4change-org.github.io"
+            "url": "https://ai4change.org"
         },
         "publisher": {
             "@type": "Organization",
@@ -950,6 +951,26 @@
         [data-theme="light"] .nav-links a:hover { color: var(--text); }
         [data-theme="light"] .filter-btn:hover { color: var(--brand-primary); }
 
+        /* Skip to content */
+        .skip-to-content {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-glow);
+            color: var(--brand-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 12px 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 9999;
+            transition: top 0.3s;
+            text-decoration: none;
+        }
+        .skip-to-content:focus {
+            top: 0;
+        }
+
         /* ============================================================
            RESPONSIVE
            ============================================================ */
@@ -990,12 +1011,13 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
 
     <!-- Particle Background -->
     <canvas id="particles-canvas"></canvas>
 
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
         <a href="/" class="nav-logo"><img src="/assets/favicon.svg" alt="" class="nav-logo-img" width="32" height="32">AI4Change</a>
         <div class="nav-links">
             <a href="/">Home</a>
@@ -1025,6 +1047,7 @@
         <a href="/join.html" class="btn btn-primary" style="margin-top:1rem;">Get Involved</a>
     </div>
 
+    <main id="main-content">
     <!-- ============================================================
          HERO
          ============================================================ -->
@@ -1230,6 +1253,8 @@
             <a href="https://github.com/ai4change-org/problems/issues/new" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Submit a Problem on GitHub</a>
         </div>
     </section>
+
+    </main>
 
     <!-- ============================================================
          FOOTER
@@ -1481,5 +1506,6 @@
         });
     }
     </script>
+    <script src="/js/analytics.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,17 @@
+/* TEAM */
+Founder: Valter Silva
+Site: https://github.com/valter-silva-au
+From: Australia
+
+/* THANKS */
+Playing for Change — for the inspiration
+Open-source contributors everywhere — for proving what's possible
+
+/* SITE */
+Last updated: 2026-03-28
+Language: English
+Standards: HTML5, CSS3, ES6
+Components: Service Worker (PWA), Schema.org JSON-LD
+Fonts: Inter (body), Space Grotesk (headlines)
+Colors: #00D4AA (Emerald Teal), #7C3AED (Electric Violet), #FF6B35 (Warm Coral), #0A0E1A (Deep Space)
+Software: Built with love and AI

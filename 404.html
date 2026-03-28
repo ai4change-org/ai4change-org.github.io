@@ -8,12 +8,12 @@
     <meta property="og:title" content="Page Not Found — AI4Change">
     <meta property="og:description" content="This page doesn't exist yet. Head back to the AI4Change homepage or submit a new problem.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ai4change-org.github.io/404.html">
-    <meta property="og:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta property="og:url" content="https://ai4change.org/404.html">
+    <meta property="og:image" content="https://ai4change.org/assets/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Page Not Found — AI4Change">
     <meta name="twitter:description" content="This page doesn't exist yet. Head back to the AI4Change homepage or submit a new problem.">
-    <meta name="twitter:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta name="twitter:image" content="https://ai4change.org/assets/og-image.png">
     <meta name="twitter:site" content="@ai4changeorg">
     <meta name="theme-color" content="#00D4AA">
     <link rel="manifest" href="/manifest.json">
@@ -613,6 +613,26 @@
             background: radial-gradient(circle, rgba(0, 212, 170, 0.06), rgba(124, 58, 237, 0.03), transparent 70%);
         }
 
+        /* Skip to content */
+        .skip-to-content {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-glow);
+            color: var(--brand-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 12px 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 9999;
+            transition: top 0.3s;
+            text-decoration: none;
+        }
+        .skip-to-content:focus {
+            top: 0;
+        }
+
         /* ============================================================
            RESPONSIVE
            ============================================================ */
@@ -649,11 +669,13 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
     <!-- Particle Background -->
     <canvas id="particles-canvas"></canvas>
 
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
         <a href="/" class="nav-logo">AI4Change</a>
         <div class="nav-links">
             <a href="/">Home</a>
@@ -662,6 +684,7 @@
             <a href="/problems.html">Problems</a>
             <a href="/blog/">Blog</a>
             <a href="/join.html">Join</a>
+            <a href="/contributors.html">Contributors</a>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="theme-icon">&#9790;</span></button>
             <a href="/join.html" class="nav-cta">Get Involved</a>
         </div>
@@ -678,9 +701,11 @@
         <a href="/problems.html">Problems</a>
         <a href="/blog/">Blog</a>
         <a href="/join.html">Join</a>
+        <a href="/contributors.html">Contributors</a>
         <a href="/join.html" class="btn btn-primary" style="margin-top:1rem;">Get Involved</a>
     </div>
 
+    <main id="main-content">
     <!-- ============================================================
          404 CONTENT
          ============================================================ -->
@@ -710,6 +735,8 @@
             <a href="/problems.html" class="btn btn-ghost">Browse Problems</a>
         </div>
     </section>
+
+    </main>
 
     <!-- ============================================================
          FOOTER
@@ -929,6 +956,7 @@
         });
     }
     </script>
+    <script src="/js/analytics.js" defer></script>
 
 </body>
 </html>

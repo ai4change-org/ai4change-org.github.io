@@ -8,12 +8,12 @@
     <meta property="og:title" content="Join — AI4Change">
     <meta property="og:description" content="Join the AI4Change movement. Star on GitHub, submit a problem, contribute code, or just explore. Everyone is welcome.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ai4change-org.github.io/join.html">
-    <meta property="og:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta property="og:url" content="https://ai4change.org/join.html">
+    <meta property="og:image" content="https://ai4change.org/assets/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Join — AI4Change">
     <meta name="twitter:description" content="Join the AI4Change movement. Star on GitHub, submit a problem, contribute code, or just explore. Everyone is welcome.">
-    <meta name="twitter:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta name="twitter:image" content="https://ai4change.org/assets/og-image.png">
     <meta name="twitter:site" content="@ai4changeorg">
     <meta name="theme-color" content="#00D4AA">
     <link rel="manifest" href="/manifest.json">
@@ -22,7 +22,7 @@
     <meta name="keywords" content="AI4Change, join, contribute, open source, AI, social impact, community, volunteer, developer, designer">
     <meta name="author" content="AI4Change Contributors">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://ai4change-org.github.io/join.html">
+    <link rel="canonical" href="https://ai4change.org/join.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -34,16 +34,16 @@
         "@type": "WebPage",
         "name": "Join AI4Change",
         "description": "Join the AI4Change movement. Star on GitHub, submit a problem, contribute code, or just explore. Everyone is welcome.",
-        "url": "https://ai4change-org.github.io/join.html",
+        "url": "https://ai4change.org/join.html",
         "isPartOf": {
             "@type": "WebSite",
             "name": "AI4Change",
-            "url": "https://ai4change-org.github.io"
+            "url": "https://ai4change.org"
         },
         "mainEntity": {
             "@type": "Organization",
             "name": "AI4Change",
-            "url": "https://ai4change-org.github.io",
+            "url": "https://ai4change.org",
             "sameAs": [
                 "https://github.com/ai4change-org",
                 "https://twitter.com/ai4changeorg",
@@ -1150,6 +1150,26 @@
         [data-theme="light"] .footer-col h4 { color: var(--text); }
         [data-theme="light"] #particles-canvas { opacity: 0.3; }
 
+        /* Skip to content */
+        .skip-to-content {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-glow);
+            color: var(--brand-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 12px 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 9999;
+            transition: top 0.3s;
+            text-decoration: none;
+        }
+        .skip-to-content:focus {
+            top: 0;
+        }
+
         /* ============================================================
            RESPONSIVE
            ============================================================ */
@@ -1196,11 +1216,13 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
     <!-- Particle Background -->
     <canvas id="particles-canvas"></canvas>
 
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
         <a href="/" class="nav-logo">AI4Change</a>
         <div class="nav-links">
             <a href="/">Home</a>
@@ -1209,6 +1231,7 @@
             <a href="/problems.html">Problems</a>
             <a href="/blog/">Blog</a>
             <a href="/join.html" class="active">Join</a>
+            <a href="/contributors.html">Contributors</a>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="theme-icon">&#9790;</span></button>
             <a href="/join.html" class="nav-cta">Get Involved</a>
         </div>
@@ -1223,9 +1246,11 @@
         <a href="/problems.html">Problems</a>
         <a href="/blog/">Blog</a>
         <a href="/join.html">Join</a>
+        <a href="/contributors.html">Contributors</a>
         <a href="/join.html" class="btn btn-primary" style="margin-top:1rem;">Get Involved</a>
     </div>
 
+    <main id="main-content">
     <!-- ============================================================
          HERO
          ============================================================ -->
@@ -1443,12 +1468,12 @@
             </div>
 
             <div class="repos-grid">
-                <a href="https://github.com/ai4change-org/ai4change-org.github.io" class="repo-card reveal" target="_blank" rel="noopener">
+                <a href="https://github.com/ai4change-org/ai4change.org" class="repo-card reveal" target="_blank" rel="noopener">
                     <div class="repo-icon">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                     </div>
                     <div class="repo-info">
-                        <h3><code>ai4change-org.github.io</code></h3>
+                        <h3><code>ai4change.org</code></h3>
                         <p>The website you're reading right now. Help improve it.</p>
                     </div>
                     <div class="repo-arrow">
@@ -1487,6 +1512,8 @@
             <a href="https://github.com/ai4change-org" class="btn btn-secondary" target="_blank" rel="noopener">Star on GitHub</a>
         </div>
     </section>
+
+    </main>
 
     <!-- ============================================================
          FOOTER
@@ -1705,6 +1732,7 @@
         });
     }
     </script>
+    <script src="/js/analytics.js" defer></script>
 
 </body>
 </html>
