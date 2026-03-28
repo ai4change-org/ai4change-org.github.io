@@ -1661,7 +1661,10 @@
 
         <div class="hero-actions">
             <a href="https://github.com/ai4change-org/problems/issues/new" class="btn btn-primary" target="_blank" rel="noopener">Submit a Problem</a>
-            <a href="https://github.com/ai4change-org" class="btn btn-ghost" target="_blank" rel="noopener">Star on GitHub</a>
+            <a href="https://github.com/ai4change-org" class="btn btn-ghost" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:4px"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                Star on GitHub <span id="starCount" style="opacity:0.7;margin-left:4px"></span>
+            </a>
         </div>
 
         <div class="hero-scroll-hint">
@@ -1779,7 +1782,8 @@
         </div>
 
         <div style="text-align:center; margin-top: 3rem;" class="reveal">
-            <a href="/problems.html" class="btn btn-ghost">View All Problems &rarr;</a>
+            <a href="/first-song.html" class="btn btn-primary">Vote on The First Song</a>
+            <a href="/problems.html" class="btn btn-ghost" style="margin-left: 1rem;">View All Problems &rarr;</a>
         </div>
     </section>
 
@@ -2552,6 +2556,28 @@
 
     })();
 
+    // ---- GitHub Stars Widget ----
+    (function() {
+        const el = document.getElementById('starCount');
+        if (!el) return;
+        fetch('https://api.github.com/orgs/ai4change-org')
+            .then(r => r.json())
+            .then(data => {
+                // Try org-level, fallback to main repo
+                if (data.public_repos !== undefined) {
+                    fetch('https://api.github.com/repos/ai4change-org/ai4change-org.github.io')
+                        .then(r => r.json())
+                        .then(repo => {
+                            if (repo.stargazers_count !== undefined) {
+                                el.textContent = '(' + repo.stargazers_count + ')';
+                            }
+                        })
+                        .catch(() => {});
+                }
+            })
+            .catch(() => {});
+    })();
+
     // ---- Service Worker Registration ----
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
@@ -2561,5 +2587,7 @@
     </script>
     <script src="/js/analytics.js" defer></script>
 
+<!-- Analytics: Replace with your GoatCounter or Plausible site ID -->
+    <script data-goatcounter="https://ai4change.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
