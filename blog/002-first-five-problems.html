@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problem Board — AI4Change</title>
-    <meta name="description" content="Browse real-world problems submitted by communities worldwide. Find a problem worth solving and champion it with AI and open source.">
-    <meta property="og:title" content="Problem Board — AI4Change">
-    <meta property="og:description" content="Every solution starts with a problem worth solving. Browse, signal, and champion real-world problems with AI.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ai4change-org.github.io/problems.html">
+    <title>Our First 5 Problems &mdash; AI4Change Blog</title>
+    <meta name="description" content="Introducing the five seed problems AI4Change is tackling first: water quality, crop disease, medical supply tracking, education content, and community energy.">
+    <meta property="og:title" content="Our First 5 Problems &mdash; AI4Change Blog">
+    <meta property="og:description" content="Every movement needs a first step. Here are the five real-world problems AI4Change is starting with &mdash; and why.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ai4change-org.github.io/blog/002-first-five-problems.html">
     <meta property="og:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta property="article:published_time" content="2026-03-28">
+    <meta property="article:author" content="AI4Change Team">
+    <meta property="article:section" content="Roadmap">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Problem Board — AI4Change">
-    <meta name="twitter:description" content="Every solution starts with a problem worth solving. Browse and champion real-world problems with AI.">
+    <meta name="twitter:title" content="Our First 5 Problems &mdash; AI4Change Blog">
+    <meta name="twitter:description" content="Every movement needs a first step. Here are the five real-world problems AI4Change is starting with &mdash; and why.">
     <meta name="twitter:image" content="https://ai4change-org.github.io/assets/og-image.svg">
     <meta name="twitter:site" content="@ai4changeorg">
     <meta name="theme-color" content="#00D4AA">
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-    <meta name="keywords" content="AI, open source, social impact, community, problems, solutions, environment, health, education, agriculture, energy">
-    <meta name="author" content="AI4Change Contributors">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <meta name="keywords" content="AI4Change, problems, water quality, crop disease, medical supply, education, energy, open source, AI, social impact">
+    <meta name="author" content="AI4Change Team">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://ai4change-org.github.io/problems.html">
+    <link rel="canonical" href="https://ai4change-org.github.io/blog/002-first-five-problems.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,26 +34,32 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "AI4Change Problem Board",
-        "description": "A community-driven board of real-world problems for the community to solve with AI and open source.",
-        "url": "https://ai4change-org.github.io/problems.html",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "AI4Change",
-            "url": "https://ai4change-org.github.io"
+        "@type": "BlogPosting",
+        "headline": "Our First 5 Problems",
+        "description": "Introducing the five seed problems AI4Change is tackling first: water quality, crop disease, medical supply tracking, education content, and community energy.",
+        "datePublished": "2026-03-28",
+        "author": {
+            "@type": "Organization",
+            "name": "AI4Change Team"
         },
         "publisher": {
             "@type": "Organization",
             "name": "AI4Change",
-            "url": "https://github.com/ai4change-org"
-        }
+            "url": "https://ai4change-org.github.io"
+        },
+        "url": "https://ai4change-org.github.io/blog/002-first-five-problems.html",
+        "isPartOf": {
+            "@type": "Blog",
+            "name": "AI4Change Blog",
+            "url": "https://ai4change-org.github.io/blog/"
+        },
+        "keywords": ["AI", "open source", "water quality", "crop disease", "medical supply", "education", "energy", "social impact"]
     }
     </script>
 
     <style>
         /* ============================================================
-           AI4CHANGE — Global Styles
+           AI4CHANGE — Blog Post Styles
            ============================================================ */
         :root {
             --brand-primary: #00D4AA;
@@ -154,11 +164,7 @@
             background-clip: text;
             text-decoration: none;
             letter-spacing: -0.02em;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
-        .nav-logo-img { width: 32px; height: 32px; flex-shrink: 0; }
 
         .nav-links {
             display: flex;
@@ -331,65 +337,30 @@
         }
 
         /* ============================================================
-           SECTION STYLES
+           THEME TOGGLE
            ============================================================ */
-        .section {
-            padding: var(--section-padding) 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .section-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--brand-primary);
-            margin-bottom: 1rem;
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--card-border);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: border-color 0.3s, transform 0.3s;
+            color: var(--text-muted);
         }
-        .section-label::before {
-            content: '';
-            display: inline-block;
-            width: 24px;
-            height: 2px;
-            background: var(--brand-primary);
-            border-radius: 1px;
-        }
-
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2rem, 4.5vw, 3.25rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.12;
-            letter-spacing: -0.02em;
-        }
-
-        .section-subtitle {
-            color: var(--brand-muted);
-            font-size: 1.15rem;
-            max-width: 620px;
-            line-height: 1.7;
-            margin-bottom: 3.5rem;
-        }
+        .theme-toggle:hover { border-color: var(--brand-primary); transform: rotate(30deg); }
 
         /* ============================================================
-           HERO
+           ARTICLE HERO
            ============================================================ */
-        .hero {
-            min-height: 55vh;
+        .article-hero {
             background: var(--gradient-hero);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 8rem 2rem 5rem;
+            padding: 10rem 2rem 4rem;
             position: relative;
             overflow: hidden;
         }
@@ -416,400 +387,492 @@
             animation: heroFloat 16s ease-in-out infinite reverse;
             filter: blur(40px);
         }
-        .hero-glow-3 {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 107, 53, 0.08), transparent 70%);
-            top: 30%;
-            left: 15%;
-            animation: heroFloat 10s ease-in-out infinite 2s;
-            filter: blur(30px);
-        }
 
         @keyframes heroFloat {
             0%, 100% { transform: translateY(0) scale(1); }
             50% { transform: translateY(-40px) scale(1.08); }
         }
 
-        .hero-badge {
+        .article-header {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-link {
             display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
-            background: rgba(0, 212, 170, 0.08);
-            border: 1px solid rgba(0, 212, 170, 0.2);
-            padding: 0.6rem 1.5rem;
-            border-radius: 100px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: var(--brand-primary);
+            gap: 0.5rem;
+            color: var(--brand-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
             margin-bottom: 2rem;
-            letter-spacing: 0.04em;
-            position: relative;
-            z-index: 1;
+            transition: color 0.3s;
+        }
+        .back-link:hover { color: var(--brand-primary); }
+        .back-link svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
         }
 
-        .hero h1 {
+        .article-category {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 100px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background: rgba(124, 58, 237, 0.12);
+            color: var(--brand-secondary);
+            margin-bottom: 1.25rem;
+        }
+
+        .article-header h1 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-size: clamp(2.2rem, 5.5vw, 3.5rem);
             font-weight: 800;
-            line-height: 1.05;
+            line-height: 1.1;
             letter-spacing: -0.03em;
             margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
         }
 
-        .hero-subtitle {
-            font-size: clamp(1.1rem, 2vw, 1.3rem);
-            color: var(--brand-muted);
-            max-width: 700px;
-            line-height: 1.75;
-            margin-bottom: 3rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-actions {
+        .article-meta {
             display: flex;
-            gap: 1rem;
+            align-items: center;
+            gap: 1.5rem;
             flex-wrap: wrap;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .article-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .meta-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: var(--text-muted);
         }
 
         /* ============================================================
-           CATEGORY FILTER
+           SHARE BUTTONS
            ============================================================ */
-        .filter-section {
+        .share-bar {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
             position: relative;
             z-index: 1;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            margin-top: -2.5rem;
         }
 
-        .filter-bar {
-            display: flex;
-            gap: 0.6rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 1.5rem 2rem;
+        .share-bar span {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+        }
+
+        .share-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 20px;
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-        }
-
-        .filter-btn {
-            padding: 0.55rem 1.4rem;
-            border-radius: 100px;
-            border: 1px solid var(--card-border);
-            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: var(--text-muted);
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 600;
+            text-decoration: none;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            white-space: nowrap;
+            transition: all 0.3s;
         }
-        .filter-btn:hover {
-            border-color: var(--brand-primary);
+        .share-btn:hover {
+            background: rgba(0, 212, 170, 0.1);
+            border-color: rgba(0, 212, 170, 0.2);
             color: var(--brand-primary);
-            background: rgba(0, 212, 170, 0.06);
         }
-        .filter-btn.active {
-            background: var(--gradient-glow);
-            color: var(--brand-dark);
-            border-color: transparent;
-            box-shadow: 0 4px 16px rgba(0, 212, 170, 0.25);
+        .share-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
         }
 
-        .filter-btn[data-category="Environment"].active { background: var(--cat-environment); box-shadow: 0 4px 16px rgba(0, 212, 170, 0.25); }
-        .filter-btn[data-category="Agriculture"].active { background: var(--cat-agriculture); box-shadow: 0 4px 16px rgba(255, 107, 53, 0.25); }
-        .filter-btn[data-category="Health"].active { background: var(--cat-health); box-shadow: 0 4px 16px rgba(124, 58, 237, 0.25); }
-        .filter-btn[data-category="Education"].active { background: var(--cat-education); box-shadow: 0 4px 16px rgba(255, 60, 172, 0.25); }
-        .filter-btn[data-category="Energy"].active { background: var(--cat-energy); box-shadow: 0 4px 16px rgba(0, 200, 83, 0.25); }
+        .share-copied {
+            font-size: 0.75rem;
+            color: var(--brand-primary);
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .share-copied.show { opacity: 1; }
 
         /* ============================================================
-           PROBLEMS GRID
+           ARTICLE BODY
            ============================================================ */
-        .problems-section {
-            background: linear-gradient(180deg, transparent, rgba(0, 212, 170, 0.03) 50%, transparent);
+        .article-body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem 0;
+            position: relative;
+            z-index: 1;
         }
 
-        .problems-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
+        .article-body p {
+            font-size: 1.1rem;
+            line-height: 1.85;
+            color: var(--text-muted);
+            margin-bottom: 1.75rem;
+        }
+
+        .article-body p:first-child {
+            font-size: 1.25rem;
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .article-body h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            margin: 3rem 0 1.25rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .article-body h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 2rem 0 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .article-body .highlight {
+            color: var(--brand-primary);
+            font-weight: 600;
+        }
+
+        .article-body .highlight-violet {
+            color: var(--brand-secondary);
+            font-weight: 600;
+        }
+
+        .article-body .highlight-coral {
+            color: var(--brand-accent);
+            font-weight: 600;
+        }
+
+        .article-body blockquote {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+            font-weight: 600;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 2.5rem 0;
+            padding: 1.75rem 2rem;
+            position: relative;
+            border-left: 3px solid;
+            border-image: var(--gradient-glow) 1;
+            background: rgba(0, 212, 170, 0.03);
+            border-radius: 0 16px 16px 0;
+        }
+
+        .article-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .article-body a {
+            color: var(--brand-primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(0, 212, 170, 0.3);
+            transition: border-color 0.3s;
+        }
+        .article-body a:hover {
+            border-color: var(--brand-primary);
+        }
+
+        /* ============================================================
+           PROBLEM CARDS
+           ============================================================ */
+        .problem-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 2.5rem 0 3rem;
         }
 
         .problem-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            padding: 2rem 2rem 2rem 2rem;
             position: relative;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .problem-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            border-radius: 20px 20px 0 0;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            border-radius: 20px 0 0 20px;
         }
-        .problem-card[data-category="Environment"]::before { background: var(--cat-environment); }
-        .problem-card[data-category="Agriculture"]::before { background: var(--cat-agriculture); }
-        .problem-card[data-category="Health"]::before { background: var(--cat-health); }
-        .problem-card[data-category="Education"]::before { background: var(--cat-education); }
-        .problem-card[data-category="Energy"]::before { background: var(--cat-energy); }
+
+        .problem-card[data-color="environment"]::before { background: var(--cat-environment); }
+        .problem-card[data-color="agriculture"]::before { background: var(--cat-agriculture); }
+        .problem-card[data-color="health"]::before { background: var(--cat-health); }
+        .problem-card[data-color="education"]::before { background: var(--cat-education); }
+        .problem-card[data-color="energy"]::before { background: var(--cat-energy); }
 
         .problem-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255,255,255,0.1);
         }
 
-        /* Filter animation */
-        .problem-card.hidden {
-            opacity: 0;
-            transform: scale(0.9) translateY(20px);
-            pointer-events: none;
-            position: absolute;
-            visibility: hidden;
-        }
-        .problem-card.show {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-            pointer-events: auto;
-            position: relative;
-            visibility: visible;
-        }
-
-        .card-top {
+        .problem-card-header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 0.75rem;
-            margin-bottom: 1.25rem;
-            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
 
-        .category-tag {
+        .problem-card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .problem-card[data-color="environment"] .problem-card-icon {
+            background: rgba(0, 212, 170, 0.1);
+            border: 1px solid rgba(0, 212, 170, 0.2);
+        }
+        .problem-card[data-color="agriculture"] .problem-card-icon {
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+        .problem-card[data-color="health"] .problem-card-icon {
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+        }
+        .problem-card[data-color="education"] .problem-card-icon {
+            background: rgba(255, 60, 172, 0.1);
+            border: 1px solid rgba(255, 60, 172, 0.2);
+        }
+        .problem-card[data-color="energy"] .problem-card-icon {
+            background: rgba(0, 200, 83, 0.1);
+            border: 1px solid rgba(0, 200, 83, 0.2);
+        }
+
+        .problem-card-title-block {
+            flex: 1;
+        }
+
+        .problem-card-category {
             display: inline-block;
-            padding: 0.25rem 0.85rem;
+            padding: 0.2rem 0.7rem;
             border-radius: 100px;
-            font-size: 0.72rem;
+            font-size: 0.65rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.25rem;
         }
-        .category-tag[data-cat="Environment"] { background: rgba(0, 212, 170, 0.12); color: var(--cat-environment); }
-        .category-tag[data-cat="Agriculture"] { background: rgba(255, 107, 53, 0.12); color: var(--cat-agriculture); }
-        .category-tag[data-cat="Health"] { background: rgba(124, 58, 237, 0.12); color: var(--cat-health); }
-        .category-tag[data-cat="Education"] { background: rgba(255, 60, 172, 0.12); color: var(--cat-education); }
-        .category-tag[data-cat="Energy"] { background: rgba(0, 200, 83, 0.12); color: var(--cat-energy); }
 
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            padding: 0.2rem 0.75rem;
-            border-radius: 100px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
+        .problem-card[data-color="environment"] .problem-card-category {
+            background: rgba(0, 212, 170, 0.1);
+            color: var(--cat-environment);
         }
-        .status-badge.seeking {
+        .problem-card[data-color="agriculture"] .problem-card-category {
             background: rgba(255, 107, 53, 0.1);
-            color: var(--brand-accent);
+            color: var(--cat-agriculture);
         }
-        .status-badge.seeking::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--brand-accent);
-            animation: statusPulse 2s ease-in-out infinite;
-        }
-        .status-badge.proposed {
+        .problem-card[data-color="health"] .problem-card-category {
             background: rgba(124, 58, 237, 0.1);
-            color: var(--brand-secondary);
+            color: var(--cat-health);
         }
-        .status-badge.proposed::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--brand-secondary);
+        .problem-card[data-color="education"] .problem-card-category {
+            background: rgba(255, 60, 172, 0.1);
+            color: var(--cat-education);
         }
-
-        @keyframes statusPulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
+        .problem-card[data-color="energy"] .problem-card-category {
+            background: rgba(0, 200, 83, 0.1);
+            color: var(--cat-energy);
         }
 
         .problem-card h3 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 0.65rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0;
             line-height: 1.3;
         }
-        .problem-card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.65;
-            margin-bottom: 1.5rem;
-            flex: 1;
-        }
 
-        .card-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--brand-primary);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        .card-link:hover {
-            gap: 0.75rem;
-        }
-        .card-link svg {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-            transition: transform 0.3s;
-        }
-        .card-link:hover svg {
-            transform: translateX(3px);
-        }
-
-        /* ============================================================
-           HOW PROBLEMS WORK
-           ============================================================ */
-        .how-section {
-            background: linear-gradient(180deg, transparent, rgba(124, 58, 237, 0.03) 50%, transparent);
-        }
-
-        .how-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        .how-header .section-label { justify-content: center; }
-        .how-header .section-label::before { display: none; }
-        .how-header .section-subtitle { margin: 0 auto; }
-
-        .how-steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            position: relative;
-        }
-
-        .how-steps::before {
-            content: '';
-            position: absolute;
-            top: 50px;
-            left: calc(16.67% + 1rem);
-            right: calc(16.67% + 1rem);
-            height: 2px;
-            background: var(--card-border);
-        }
-
-        .how-step {
-            text-align: center;
-            position: relative;
-        }
-
-        .how-step-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            margin: 0 auto 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-        .how-step:nth-child(1) .how-step-icon { background: rgba(0, 212, 170, 0.1); border: 1px solid rgba(0, 212, 170, 0.2); }
-        .how-step:nth-child(2) .how-step-icon { background: rgba(124, 58, 237, 0.1); border: 1px solid rgba(124, 58, 237, 0.2); }
-        .how-step:nth-child(3) .how-step-icon { background: rgba(255, 107, 53, 0.1); border: 1px solid rgba(255, 107, 53, 0.2); }
-
-        .how-step-number {
+        .problem-card-number {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 0.7rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.12em;
             color: var(--text-muted);
             margin-bottom: 0.5rem;
         }
 
-        .how-step h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 0.6rem;
+        .problem-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.75;
+            margin: 0;
         }
 
-        .how-step p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.65;
-            max-width: 280px;
-            margin: 0 auto;
+        .problem-stat {
+            display: inline-block;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .problem-card[data-color="environment"] .problem-stat { color: var(--cat-environment); }
+        .problem-card[data-color="agriculture"] .problem-stat { color: var(--cat-agriculture); }
+        .problem-card[data-color="health"] .problem-stat { color: var(--cat-health); }
+        .problem-card[data-color="education"] .problem-stat { color: var(--cat-education); }
+        .problem-card[data-color="energy"] .problem-stat { color: var(--cat-energy); }
+
+        /* ============================================================
+           CTA SECTION IN ARTICLE
+           ============================================================ */
+        .article-cta {
+            margin: 3rem 0;
+            padding: 2.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-glow);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .article-cta h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-cta p {
+            color: var(--text-muted) !important;
+            font-size: 1rem !important;
+            max-width: 500px;
+            margin: 0 auto 1.5rem !important;
+            line-height: 1.65 !important;
+        }
+
+        .article-cta .btn {
+            margin: 0 0.5rem;
         }
 
         /* ============================================================
-           SUBMIT CTA
+           PREV POST NAV
            ============================================================ */
-        .cta-section {
-            text-align: center;
-            padding: var(--section-padding) 2rem;
-            max-width: 1200px;
+        .post-nav {
+            max-width: 720px;
             margin: 0 auto;
+            padding: 3rem 2rem 4rem;
             position: relative;
             z-index: 1;
         }
 
-        .cta-section h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2rem, 4.5vw, 3rem);
+        .post-nav-label {
+            font-size: 0.72rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
         }
 
-        .cta-section > p {
-            color: var(--brand-muted);
-            font-size: 1.15rem;
-            max-width: 560px;
-            margin: 0 auto 2.5rem;
-            line-height: 1.65;
-            position: relative;
-        }
-
-        .cta-actions {
+        .post-nav-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
             display: flex;
+            align-items: center;
             gap: 1rem;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .post-nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+            border-color: rgba(0, 212, 170, 0.2);
+        }
+
+        .post-nav-arrow {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: rgba(0, 212, 170, 0.08);
+            border: 1px solid rgba(0, 212, 170, 0.15);
+            display: flex;
+            align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
-            position: relative;
+            flex-shrink: 0;
+            transition: background 0.3s;
+        }
+        .post-nav-card:hover .post-nav-arrow {
+            background: rgba(0, 212, 170, 0.15);
+        }
+        .post-nav-arrow svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--brand-primary);
+        }
+
+        .post-nav-info h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.2rem;
+        }
+
+        .post-nav-info span {
+            font-size: 0.82rem;
+            color: var(--text-muted);
         }
 
         /* ============================================================
@@ -915,66 +978,57 @@
         }
 
         /* ============================================================
-           THEME TOGGLE
-           ============================================================ */
-        .theme-toggle {
-            background: none;
-            border: 1px solid var(--card-border);
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            transition: border-color 0.3s, transform 0.3s;
-            color: var(--text-muted);
-        }
-        .theme-toggle:hover { border-color: var(--brand-primary); transform: rotate(30deg); }
-
-        /* ============================================================
            LIGHT MODE OVERRIDES
            ============================================================ */
-        [data-theme="light"] .hero { background: linear-gradient(135deg, #F0FDF9 0%, #EDE9FE 40%, #E0F2FE 100%); }
-        [data-theme="light"] .hero h1 { color: var(--brand-dark); }
+        [data-theme="light"] .article-hero { background: linear-gradient(135deg, #F0FDF9 0%, #EDE9FE 40%, #E0F2FE 100%); }
+        [data-theme="light"] .article-header h1 { color: var(--brand-dark); }
         [data-theme="light"] .mobile-toggle span { background: var(--text); }
         [data-theme="light"] .mobile-menu { background: rgba(250, 252, 255, 0.98); }
         [data-theme="light"] .mobile-menu a { color: var(--text); }
-        [data-theme="light"] .problem-card:hover { box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08); }
-        [data-theme="light"] .how-steps::before { background: rgba(0, 0, 0, 0.08); }
+        [data-theme="light"] .problem-card:hover { box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08); }
+        [data-theme="light"] .article-cta { background: rgba(0, 212, 170, 0.03); border-color: rgba(0, 212, 170, 0.12); }
+        [data-theme="light"] .post-nav-card:hover { box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06); }
+        [data-theme="light"] .article-body blockquote { color: var(--text); }
+        [data-theme="light"] .article-body p:first-child { color: var(--text); }
         [data-theme="light"] .btn-ghost { background: rgba(0,0,0,0.04); color: var(--text); border-color: rgba(0,0,0,0.1); }
         [data-theme="light"] .btn-ghost:hover { background: rgba(0,0,0,0.08); }
         [data-theme="light"] #particles-canvas { opacity: 0.3; }
         [data-theme="light"] .footer-col h4 { color: var(--text); }
         [data-theme="light"] .nav-links a:hover { color: var(--text); }
-        [data-theme="light"] .filter-btn:hover { color: var(--brand-primary); }
+        [data-theme="light"] .share-btn { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.08); }
+        [data-theme="light"] .share-btn:hover { background: rgba(0, 212, 170, 0.08); }
+        [data-theme="light"] .problem-stat { color: var(--text); }
 
         /* ============================================================
            RESPONSIVE
            ============================================================ */
         @media (max-width: 1024px) {
             .footer-inner { grid-template-columns: 1fr 1fr; }
-            .problems-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .mobile-toggle { display: flex; }
 
-            .hero { padding: 6rem 1.5rem 4rem; }
-            .hero h1 { font-size: clamp(2.2rem, 8vw, 3.2rem); }
-            .hero-subtitle { font-size: 1.05rem; }
+            .article-hero { padding: 7rem 1.5rem 3rem; }
+            .article-header h1 { font-size: clamp(1.8rem, 6vw, 2.5rem); }
 
-            .section { padding: clamp(3rem, 8vw, 5rem) 1.5rem; }
-            .section-title { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+            .article-body { padding: 2rem 1.5rem 0; }
+            .article-body p { font-size: 1rem; }
+            .article-body p:first-child { font-size: 1.1rem; }
+            .article-body blockquote { font-size: 1.05rem; padding: 1.25rem 1.5rem; }
+            .article-body h2 { font-size: 1.4rem; }
 
-            .problems-grid { grid-template-columns: 1fr; }
-            .how-steps { grid-template-columns: 1fr; gap: 3rem; }
-            .how-steps::before { display: none; }
-            .filter-section { margin-top: -1.5rem; }
-            .filter-bar { padding: 1rem 1.25rem; gap: 0.5rem; }
-            .filter-btn { padding: 0.45rem 1.1rem; font-size: 0.8rem; }
+            .share-bar { padding: 1rem 1.5rem; }
+
+            .problem-card { padding: 1.5rem; }
+            .problem-card-icon { width: 44px; height: 44px; font-size: 1.25rem; }
+            .problem-card h3 { font-size: 1.1rem; }
+            .problem-card p { font-size: 0.92rem; }
+
+            .article-cta { padding: 2rem 1.5rem; margin: 2rem 0; }
+
+            .post-nav { padding: 2rem 1.5rem 3rem; }
 
             .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
             .footer-bottom { flex-direction: column; text-align: center; }
@@ -982,10 +1036,13 @@
 
         @media (max-width: 480px) {
             nav { padding: 0.75rem 1rem; }
-            .hero { padding: 5rem 1rem 3rem; }
-            .hero-badge { font-size: 0.75rem; padding: 0.4rem 1rem; }
+            .article-hero { padding: 6rem 1rem 2.5rem; }
             .btn { padding: 0.85rem 1.75rem; font-size: 0.9rem; }
-            .cta-actions { flex-direction: column; align-items: center; }
+            .article-cta .btn { margin: 0.25rem; }
+
+            .problem-card-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+
+            .post-nav-card { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
@@ -996,14 +1053,13 @@
 
     <!-- Navigation -->
     <nav id="navbar">
-        <a href="/" class="nav-logo"><img src="/assets/favicon.svg" alt="" class="nav-logo-img" width="32" height="32">AI4Change</a>
+        <a href="/" class="nav-logo">AI4Change</a>
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="/about.html">About</a>
             <a href="/manifesto.html">Manifesto</a>
-            <a href="/problems.html" class="active">Problems</a>
-            <a href="/blog/">Blog</a>
-            <a href="/contributors.html">Contributors</a>
+            <a href="/problems.html">Problems</a>
+            <a href="/blog/" class="active">Blog</a>
             <a href="/join.html">Join</a>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="theme-icon">&#9790;</span></button>
             <a href="/join.html" class="nav-cta">Get Involved</a>
@@ -1020,216 +1076,174 @@
         <a href="/manifesto.html">Manifesto</a>
         <a href="/problems.html">Problems</a>
         <a href="/blog/">Blog</a>
-        <a href="/contributors.html">Contributors</a>
         <a href="/join.html">Join</a>
         <a href="/join.html" class="btn btn-primary" style="margin-top:1rem;">Get Involved</a>
     </div>
 
     <!-- ============================================================
-         HERO
+         ARTICLE HERO
          ============================================================ -->
-    <section class="hero">
+    <section class="article-hero">
         <div class="hero-glow-1"></div>
         <div class="hero-glow-2"></div>
-        <div class="hero-glow-3"></div>
 
-        <div class="hero-badge reveal">Community Driven &middot; Open Source &middot; AI Powered</div>
-
-        <h1 class="reveal reveal-delay-1">
-            Problem<br><span class="gradient-text">Board</span>
-        </h1>
-
-        <p class="hero-subtitle reveal reveal-delay-2">
-            Every solution starts with a problem worth solving. Real communities post real challenges. The world builds real answers. Together, in the open.
-        </p>
-
-        <div class="hero-actions reveal reveal-delay-3">
-            <a href="https://github.com/ai4change-org/problems/issues/new" class="btn btn-primary" target="_blank" rel="noopener">Submit a Problem</a>
-            <a href="#problems" class="btn btn-ghost">Browse Problems</a>
+        <div class="article-header">
+            <a href="/blog/" class="back-link reveal">
+                <svg viewBox="0 0 16 16"><path d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"/></svg>
+                Back to Blog
+            </a>
+            <div class="article-category reveal reveal-delay-1">Roadmap</div>
+            <h1 class="reveal reveal-delay-2">Our First <span class="gradient-text">5 Problems</span></h1>
+            <div class="article-meta reveal reveal-delay-3">
+                <span>March 28, 2026</span>
+                <span class="meta-dot"></span>
+                <span>AI4Change Team</span>
+                <span class="meta-dot"></span>
+                <span>6 min read</span>
+            </div>
         </div>
     </section>
 
     <!-- ============================================================
-         CATEGORY FILTER
+         SHARE BAR
          ============================================================ -->
-    <div class="filter-section reveal">
-        <div class="filter-bar" id="filterBar">
-            <button class="filter-btn active" data-category="All">All</button>
-            <button class="filter-btn" data-category="Environment">Environment</button>
-            <button class="filter-btn" data-category="Agriculture">Agriculture</button>
-            <button class="filter-btn" data-category="Health">Health</button>
-            <button class="filter-btn" data-category="Education">Education</button>
-            <button class="filter-btn" data-category="Energy">Energy</button>
+    <div class="article-body" style="padding-top: 0;">
+        <div class="share-bar reveal">
+            <span>Share</span>
+            <a href="https://twitter.com/intent/tweet?text=Our%20First%205%20Problems%20%E2%80%94%20AI4Change&url=https://ai4change-org.github.io/blog/002-first-five-problems.html" target="_blank" rel="noopener" class="share-btn" aria-label="Share on Twitter">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://ai4change-org.github.io/blog/002-first-five-problems.html" target="_blank" rel="noopener" class="share-btn" aria-label="Share on LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <button class="share-btn" id="copyLink" aria-label="Copy link">
+                <svg viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <span class="share-copied" id="copiedMsg">Copied!</span>
         </div>
     </div>
 
     <!-- ============================================================
-         PROBLEMS GRID
+         ARTICLE BODY
          ============================================================ -->
-    <div class="problems-section">
-        <section class="section" id="problems">
-            <div class="problems-grid" id="problemsGrid">
+    <article class="article-body">
 
-                <!-- Card 1: Water Quality Monitoring -->
-                <div class="problem-card reveal show" data-category="Environment">
-                    <div class="card-top">
-                        <span class="category-tag" data-cat="Environment">Environment</span>
-                        <span class="status-badge seeking">Seeking Champions</span>
+        <p class="reveal">Every movement needs a first step. For AI4Change, that step is choosing which problems to tackle first. Not the easiest problems. Not the most technically interesting. The ones where real people are hurting the most &mdash; and where AI can make the biggest difference the fastest.</p>
+
+        <p class="reveal">Today we are announcing our five seed problems: the first entries on the <a href="/problems.html">AI4Change Problem Board</a>. These are the challenges that will attract our first champions, our first teams, and our first shipped solutions.</p>
+
+        <h2 class="reveal">How We Chose</h2>
+
+        <p class="reveal">We didn't sit in a conference room with whiteboards. We asked. We listened. We looked at where the gap between "problem" and "solution" was widest, and where AI could bridge it.</p>
+
+        <p class="reveal">We filtered for three things: <span class="highlight">human urgency</span> (are people suffering right now?), <span class="highlight-violet">AI leverage</span> (can AI dramatically accelerate the solution?), and <span class="highlight-coral">open-source viability</span> (can the solution be built in the open, by a distributed community, and given away for free?). Every problem that made this list scored high on all three.</p>
+
+        <blockquote class="reveal">We don't pick problems because they're interesting to technologists. We pick them because they're unbearable to the people living them.</blockquote>
+
+        <h2 class="reveal">The Five Problems</h2>
+
+        <div class="problem-cards">
+
+            <!-- Problem 1: Water Quality Monitoring -->
+            <div class="problem-card reveal" data-color="environment">
+                <div class="problem-card-header">
+                    <div class="problem-card-icon">&#128167;</div>
+                    <div class="problem-card-title-block">
+                        <div class="problem-card-category">Environment</div>
+                        <h3>Water Quality Monitoring</h3>
                     </div>
-                    <h3>Water Quality Monitoring</h3>
-                    <p>AI-powered sensors + satellite imagery to detect water contamination in real time</p>
-                    <a href="https://github.com/ai4change-org/problems/issues" class="card-link" target="_blank" rel="noopener">
-                        View on GitHub
-                        <svg viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 010 1.5H4.56l7.22 7.22a.75.75 0 11-1.06 1.06L3.5 4.56v2.69a.75.75 0 01-1.5 0v-3.5A1.75 1.75 0 013.75 2z"/><path d="M7.25 6.5a.75.75 0 000 1.5h4.5a.25.25 0 01.25.25v4.5a.25.25 0 01-.25.25h-4.5a.25.25 0 01-.25-.25v-4.5a.75.75 0 00-1.5 0v4.5c0 .966.784 1.75 1.75 1.75h4.5A1.75 1.75 0 0013.5 12.75v-4.5A1.75 1.75 0 0011.75 6.5h-4.5z"/></svg>
-                    </a>
                 </div>
-
-                <!-- Card 2: Crop Disease Detection -->
-                <div class="problem-card reveal show" data-category="Agriculture">
-                    <div class="card-top">
-                        <span class="category-tag" data-cat="Agriculture">Agriculture</span>
-                        <span class="status-badge seeking">Seeking Champions</span>
-                    </div>
-                    <h3>Crop Disease Detection</h3>
-                    <p>Phone-camera AI to identify crop diseases instantly and suggest treatment</p>
-                    <a href="https://github.com/ai4change-org/problems/issues" class="card-link" target="_blank" rel="noopener">
-                        View on GitHub
-                        <svg viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 010 1.5H4.56l7.22 7.22a.75.75 0 11-1.06 1.06L3.5 4.56v2.69a.75.75 0 01-1.5 0v-3.5A1.75 1.75 0 013.75 2z"/><path d="M7.25 6.5a.75.75 0 000 1.5h4.5a.25.25 0 01.25.25v4.5a.25.25 0 01-.25.25h-4.5a.25.25 0 01-.25-.25v-4.5a.75.75 0 00-1.5 0v4.5c0 .966.784 1.75 1.75 1.75h4.5A1.75 1.75 0 0013.5 12.75v-4.5A1.75 1.75 0 0011.75 6.5h-4.5z"/></svg>
-                    </a>
-                </div>
-
-                <!-- Card 3: Medical Supply Tracking -->
-                <div class="problem-card reveal show" data-category="Health">
-                    <div class="card-top">
-                        <span class="category-tag" data-cat="Health">Health</span>
-                        <span class="status-badge seeking">Seeking Champions</span>
-                    </div>
-                    <h3>Medical Supply Tracking</h3>
-                    <p>AI logistics to predict demand and optimize supply routes in remote regions</p>
-                    <a href="https://github.com/ai4change-org/problems/issues" class="card-link" target="_blank" rel="noopener">
-                        View on GitHub
-                        <svg viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 010 1.5H4.56l7.22 7.22a.75.75 0 11-1.06 1.06L3.5 4.56v2.69a.75.75 0 01-1.5 0v-3.5A1.75 1.75 0 013.75 2z"/><path d="M7.25 6.5a.75.75 0 000 1.5h4.5a.25.25 0 01.25.25v4.5a.25.25 0 01-.25.25h-4.5a.25.25 0 01-.25-.25v-4.5a.75.75 0 00-1.5 0v4.5c0 .966.784 1.75 1.75 1.75h4.5A1.75 1.75 0 0013.5 12.75v-4.5A1.75 1.75 0 0011.75 6.5h-4.5z"/></svg>
-                    </a>
-                </div>
-
-                <!-- Card 4: Education Content Generation -->
-                <div class="problem-card reveal show" data-category="Education">
-                    <div class="card-top">
-                        <span class="category-tag" data-cat="Education">Education</span>
-                        <span class="status-badge seeking">Seeking Champions</span>
-                    </div>
-                    <h3>Education Content Generation</h3>
-                    <p>AI-generated, translated, and adapted learning materials for underserved communities</p>
-                    <a href="https://github.com/ai4change-org/problems/issues" class="card-link" target="_blank" rel="noopener">
-                        View on GitHub
-                        <svg viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 010 1.5H4.56l7.22 7.22a.75.75 0 11-1.06 1.06L3.5 4.56v2.69a.75.75 0 01-1.5 0v-3.5A1.75 1.75 0 013.75 2z"/><path d="M7.25 6.5a.75.75 0 000 1.5h4.5a.25.25 0 01.25.25v4.5a.25.25 0 01-.25.25h-4.5a.25.25 0 01-.25-.25v-4.5a.75.75 0 00-1.5 0v4.5c0 .966.784 1.75 1.75 1.75h4.5A1.75 1.75 0 0013.5 12.75v-4.5A1.75 1.75 0 0011.75 6.5h-4.5z"/></svg>
-                    </a>
-                </div>
-
-                <!-- Card 5: Community Energy Optimization -->
-                <div class="problem-card reveal show" data-category="Energy">
-                    <div class="card-top">
-                        <span class="category-tag" data-cat="Energy">Energy</span>
-                        <span class="status-badge seeking">Seeking Champions</span>
-                    </div>
-                    <h3>Community Energy Optimization</h3>
-                    <p>AI-optimized microgrids for efficient solar/wind power distribution</p>
-                    <a href="https://github.com/ai4change-org/problems/issues" class="card-link" target="_blank" rel="noopener">
-                        View on GitHub
-                        <svg viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 010 1.5H4.56l7.22 7.22a.75.75 0 11-1.06 1.06L3.5 4.56v2.69a.75.75 0 01-1.5 0v-3.5A1.75 1.75 0 013.75 2z"/><path d="M7.25 6.5a.75.75 0 000 1.5h4.5a.25.25 0 01.25.25v4.5a.25.25 0 01-.25.25h-4.5a.25.25 0 01-.25-.25v-4.5a.75.75 0 00-1.5 0v4.5c0 .966.784 1.75 1.75 1.75h4.5A1.75 1.75 0 0013.5 12.75v-4.5A1.75 1.75 0 0011.75 6.5h-4.5z"/></svg>
-                    </a>
-                </div>
-
-                <!-- Card 6: Disaster Early Warning -->
-                <div class="problem-card reveal show" data-category="Environment">
-                    <div class="card-top">
-                        <span class="category-tag" data-cat="Environment">Environment</span>
-                        <span class="status-badge proposed">Proposed</span>
-                    </div>
-                    <h3>Disaster Early Warning</h3>
-                    <p>AI models that predict floods, landslides, and severe weather for vulnerable regions</p>
-                    <a href="https://github.com/ai4change-org/problems/issues" class="card-link" target="_blank" rel="noopener">
-                        View on GitHub
-                        <svg viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 010 1.5H4.56l7.22 7.22a.75.75 0 11-1.06 1.06L3.5 4.56v2.69a.75.75 0 01-1.5 0v-3.5A1.75 1.75 0 013.75 2z"/><path d="M7.25 6.5a.75.75 0 000 1.5h4.5a.25.25 0 01.25.25v4.5a.25.25 0 01-.25.25h-4.5a.25.25 0 01-.25-.25v-4.5a.75.75 0 00-1.5 0v4.5c0 .966.784 1.75 1.75 1.75h4.5A1.75 1.75 0 0013.5 12.75v-4.5A1.75 1.75 0 0011.75 6.5h-4.5z"/></svg>
-                    </a>
-                </div>
-
-                <!-- Card 7: Mental Health Screening -->
-                <div class="problem-card reveal show" data-category="Health">
-                    <div class="card-top">
-                        <span class="category-tag" data-cat="Health">Health</span>
-                        <span class="status-badge proposed">Proposed</span>
-                    </div>
-                    <h3>Mental Health Screening</h3>
-                    <p>AI-assisted mental health triage for communities with no access to psychologists</p>
-                    <a href="https://github.com/ai4change-org/problems/issues" class="card-link" target="_blank" rel="noopener">
-                        View on GitHub
-                        <svg viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 010 1.5H4.56l7.22 7.22a.75.75 0 11-1.06 1.06L3.5 4.56v2.69a.75.75 0 01-1.5 0v-3.5A1.75 1.75 0 013.75 2z"/><path d="M7.25 6.5a.75.75 0 000 1.5h4.5a.25.25 0 01.25.25v4.5a.25.25 0 01-.25.25h-4.5a.25.25 0 01-.25-.25v-4.5a.75.75 0 00-1.5 0v4.5c0 .966.784 1.75 1.75 1.75h4.5A1.75 1.75 0 0013.5 12.75v-4.5A1.75 1.75 0 0011.75 6.5h-4.5z"/></svg>
-                    </a>
-                </div>
-
-                <!-- Card 8: Language Preservation -->
-                <div class="problem-card reveal show" data-category="Education">
-                    <div class="card-top">
-                        <span class="category-tag" data-cat="Education">Education</span>
-                        <span class="status-badge proposed">Proposed</span>
-                    </div>
-                    <h3>Language Preservation</h3>
-                    <p>AI tools to document, teach, and preserve endangered languages</p>
-                    <a href="https://github.com/ai4change-org/problems/issues" class="card-link" target="_blank" rel="noopener">
-                        View on GitHub
-                        <svg viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 010 1.5H4.56l7.22 7.22a.75.75 0 11-1.06 1.06L3.5 4.56v2.69a.75.75 0 01-1.5 0v-3.5A1.75 1.75 0 013.75 2z"/><path d="M7.25 6.5a.75.75 0 000 1.5h4.5a.25.25 0 01.25.25v4.5a.25.25 0 01-.25.25h-4.5a.25.25 0 01-.25-.25v-4.5a.75.75 0 00-1.5 0v4.5c0 .966.784 1.75 1.75 1.75h4.5A1.75 1.75 0 0013.5 12.75v-4.5A1.75 1.75 0 0011.75 6.5h-4.5z"/></svg>
-                    </a>
-                </div>
-
-            </div>
-        </section>
-    </div>
-
-    <!-- ============================================================
-         HOW PROBLEMS WORK
-         ============================================================ -->
-    <div class="how-section">
-        <section class="section">
-            <div class="how-header">
-                <div class="section-label reveal">How It Works</div>
-                <h2 class="section-title reveal reveal-delay-1">From Problem to <span class="gradient-text">Solution</span></h2>
-                <p class="section-subtitle reveal reveal-delay-2">Three steps from a real-world challenge to an open-source solution built by the community.</p>
+                <p><span class="problem-stat">2 billion people</span> drink contaminated water daily. They know the water might be bad. They drink it anyway, because there is no alternative and no warning system.</p>
+                <p style="margin-top: 1rem;">AI-powered sensors combined with satellite imagery can detect contamination in real time and alert communities <em>before</em> people get sick. The technology exists. The data exists. What's missing is the open-source pipeline that puts it all together &mdash; an end-to-end system that any community, anywhere, can deploy without a PhD or a corporate contract.</p>
             </div>
 
-            <div class="how-steps">
-                <div class="how-step reveal">
-                    <div class="how-step-icon">&#128221;</div>
-                    <div class="how-step-number">Step 01</div>
-                    <h3>Submit</h3>
-                    <p>Anyone can submit a real-world problem their community faces. No code required, just a clear description of the challenge.</p>
+            <!-- Problem 2: Crop Disease Detection -->
+            <div class="problem-card reveal" data-color="agriculture">
+                <div class="problem-card-header">
+                    <div class="problem-card-icon">&#127806;</div>
+                    <div class="problem-card-title-block">
+                        <div class="problem-card-category">Agriculture</div>
+                        <h3>Crop Disease Detection</h3>
+                    </div>
                 </div>
-                <div class="how-step reveal reveal-delay-2">
-                    <div class="how-step-icon">&#128227;</div>
-                    <div class="how-step-number">Step 02</div>
-                    <h3>Community Signals</h3>
-                    <p>The community upvotes, discusses, and refines problems. Champions emerge to lead the solution effort.</p>
-                </div>
-                <div class="how-step reveal reveal-delay-4">
-                    <div class="how-step-icon">&#128640;</div>
-                    <div class="how-step-number">Step 03</div>
-                    <h3>Build Together</h3>
-                    <p>Teams form around high-signal problems. They build open-source AI solutions that anyone can use and adapt.</p>
-                </div>
+                <p>Smallholder farmers lose up to <span class="problem-stat">40% of their harvest</span> to diseases they can't identify until it's too late. By the time the leaves turn yellow or the fruit rots, the damage is done. Entire seasons. Entire livelihoods. Gone.</p>
+                <p style="margin-top: 1rem;">A phone camera and an AI model can identify crop diseases instantly and suggest treatment &mdash; the same way a dermatologist app identifies a skin condition. This single capability could save millions of families from food insecurity. The models exist in research papers. We need to put them in farmers' hands.</p>
             </div>
-        </section>
-    </div>
 
-    <!-- ============================================================
-         SUBMIT CTA
-         ============================================================ -->
-    <section class="cta-section">
-        <h2 class="reveal">Have a problem your<br>community <span class="gradient-text">faces?</span></h2>
-        <p class="reveal reveal-delay-1">Your community's challenge could become the next open-source AI solution. Submit it and let the world help.</p>
-        <div class="cta-actions reveal reveal-delay-2">
-            <a href="https://github.com/ai4change-org/problems/issues/new" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Submit a Problem on GitHub</a>
+            <!-- Problem 3: Medical Supply Tracking -->
+            <div class="problem-card reveal" data-color="health">
+                <div class="problem-card-header">
+                    <div class="problem-card-icon">&#127973;</div>
+                    <div class="problem-card-title-block">
+                        <div class="problem-card-category">Health</div>
+                        <h3>Medical Supply Tracking</h3>
+                    </div>
+                </div>
+                <p>In remote regions, medical supplies run out because <span class="problem-stat">nobody predicted the demand spike</span>. A clinic in rural Malawi runs out of malaria medication during rainy season &mdash; every single year. Not because the medication doesn't exist, but because the supply chain can't see what's coming.</p>
+                <p style="margin-top: 1rem;">AI logistics can forecast need based on seasonal patterns, population data, and historical demand. It can optimize delivery routes, predict stockouts before they happen, and ensure vaccines and medications reach people when they need them &mdash; not weeks later.</p>
+            </div>
+
+            <!-- Problem 4: Education Content Generation -->
+            <div class="problem-card reveal" data-color="education">
+                <div class="problem-card-header">
+                    <div class="problem-card-icon">&#128218;</div>
+                    <div class="problem-card-title-block">
+                        <div class="problem-card-category">Education</div>
+                        <h3>Education Content Generation</h3>
+                    </div>
+                </div>
+                <p><span class="problem-stat">250 million children</span> lack access to quality learning materials in their own language. They sit in classrooms with outdated textbooks written for a different culture, a different context, a different reality. Or they have no textbooks at all.</p>
+                <p style="margin-top: 1rem;">AI can generate, translate, and culturally adapt educational content for any language and any context &mdash; and it can do it at scale, for free. A math lesson for a 10-year-old in Quechua. A science module for a teenager in Amharic. Locally relevant, pedagogically sound, and infinitely reproducible.</p>
+            </div>
+
+            <!-- Problem 5: Community Energy Optimization -->
+            <div class="problem-card reveal" data-color="energy">
+                <div class="problem-card-header">
+                    <div class="problem-card-icon">&#9889;</div>
+                    <div class="problem-card-title-block">
+                        <div class="problem-card-category">Energy</div>
+                        <h3>Community Energy Optimization</h3>
+                    </div>
+                </div>
+                <p>Off-grid communities depend on <span class="problem-stat">unreliable power</span> that cuts out at the worst moments &mdash; when a student needs light to study, when a clinic needs power for refrigeration, when a family needs to cook after dark.</p>
+                <p style="margin-top: 1rem;">AI-optimized microgrids can distribute solar and wind energy efficiently across a community, predicting usage patterns and balancing supply against demand in real time. Less waste, fewer blackouts, and energy independence for the communities that need it most.</p>
+            </div>
+
         </div>
-    </section>
+
+        <h2 class="reveal">What Happens Next</h2>
+
+        <p class="reveal">Each of these five problems will become a GitHub issue on the <a href="https://github.com/ai4change-org/problems/issues" target="_blank" rel="noopener">AI4Change Problems Board</a>. Community members can signal which problems matter most to them. Champions will step forward &mdash; people who care enough about a problem to lead the effort of solving it. Teams will form around those champions. And solutions will ship &mdash; open source, forever.</p>
+
+        <p class="reveal">This is just the beginning. These five problems are seeds. As the community grows, more problems will be submitted, triaged, and championed. The board is open to anyone. If your community faces a challenge that AI could help solve, <a href="https://github.com/ai4change-org/problems/issues/new" target="_blank" rel="noopener">submit it</a>.</p>
+
+        <blockquote class="reveal">The problems don't wait for us to be ready. So we start now, with what we have, where we are.</blockquote>
+
+        <!-- CTA -->
+        <div class="article-cta reveal">
+            <h3>See a problem you care about?</h3>
+            <p>Head to the Problems Board and signal your interest. Or better yet &mdash; become a champion.</p>
+            <a href="/problems.html" class="btn btn-primary">View the Problem Board</a>
+            <a href="https://github.com/ai4change-org/problems/issues/new" class="btn btn-ghost" target="_blank" rel="noopener">Submit a Problem</a>
+        </div>
+
+    </article>
+
+    <!-- ============================================================
+         PREVIOUS POST NAV
+         ============================================================ -->
+    <div class="post-nav reveal">
+        <div class="post-nav-label">Previous Post</div>
+        <a href="/blog/001-why-ai4change.html" class="post-nav-card">
+            <div class="post-nav-arrow">
+                <svg viewBox="0 0 16 16"><path d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"/></svg>
+            </div>
+            <div class="post-nav-info">
+                <h4>Why AI4Change Exists</h4>
+                <span>The founding story behind the movement</span>
+            </div>
+        </a>
+    </div>
 
     <!-- ============================================================
          FOOTER
@@ -1237,7 +1251,7 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
-                <a href="/" class="nav-logo"><img src="/assets/favicon.svg" alt="" class="nav-logo-img" width="32" height="32">AI4Change</a>
+                <a href="/" class="nav-logo">AI4Change</a>
                 <p>A global open-source movement where real people use AI as their instrument to solve humanity's most pressing problems. Together.</p>
             </div>
             <div class="footer-col">
@@ -1247,7 +1261,6 @@
                     <li><a href="/manifesto.html">Manifesto</a></li>
                     <li><a href="/problems.html">Problems</a></li>
                     <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/contributors.html">Contributors</a></li>
                     <li><a href="/join.html">Join</a></li>
                 </ul>
             </div>
@@ -1408,46 +1421,21 @@
             document.body.style.overflow = isActive ? 'hidden' : '';
         });
 
-        // ---- Smooth scroll for anchor links ----
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', function(e) {
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    e.preventDefault();
-                    const offset = navbar.offsetHeight + 16;
-                    const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                    window.scrollTo({ top: y, behavior: 'smooth' });
-                }
-            });
+        document.querySelectorAll('#mobileMenu a').forEach(a => {
+            a.addEventListener('click', closeMobile);
         });
 
-        // ---- Category Filter ----
-        const filterBar = document.getElementById('filterBar');
-        const problemsGrid = document.getElementById('problemsGrid');
-        const cards = problemsGrid.querySelectorAll('.problem-card');
-
-        filterBar.addEventListener('click', function(e) {
-            const btn = e.target.closest('.filter-btn');
-            if (!btn) return;
-
-            const category = btn.getAttribute('data-category');
-
-            // Update active state on buttons
-            filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            // Filter cards
-            cards.forEach(card => {
-                const cardCat = card.getAttribute('data-category');
-                if (category === 'All' || cardCat === category) {
-                    card.classList.remove('hidden');
-                    card.classList.add('show');
-                } else {
-                    card.classList.remove('show');
-                    card.classList.add('hidden');
-                }
+        // ---- Copy Link ----
+        const copyBtn = document.getElementById('copyLink');
+        const copiedMsg = document.getElementById('copiedMsg');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', function() {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    copiedMsg.classList.add('show');
+                    setTimeout(() => copiedMsg.classList.remove('show'), 2000);
+                });
             });
-        });
+        }
 
         // ---- Dark/Light Theme Toggle ----
         const themeToggle = document.getElementById('themeToggle');

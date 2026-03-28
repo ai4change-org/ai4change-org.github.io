@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why AI4Change Exists &mdash; AI4Change Blog</title>
+    <meta name="description" content="The origin story of AI4Change — how Playing for Change inspired a global open-source movement that uses AI as the instrument to solve humanity's most pressing problems.">
+    <meta property="og:title" content="Why AI4Change Exists &mdash; AI4Change Blog">
+    <meta property="og:description" content="The origin story of AI4Change — how Playing for Change inspired a global open-source movement that uses AI as the instrument to solve humanity's most pressing problems.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ai4change-org.github.io/blog/001-why-ai4change.html">
+    <meta property="og:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta property="article:published_time" content="2026-03-28">
+    <meta property="article:author" content="AI4Change Team">
+    <meta property="article:section" content="Origin Story">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why AI4Change Exists &mdash; AI4Change Blog">
+    <meta name="twitter:description" content="The origin story of AI4Change — how Playing for Change inspired a global open-source movement using AI to solve real problems.">
+    <meta name="twitter:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta name="twitter:site" content="@ai4changeorg">
+    <meta name="theme-color" content="#00D4AA">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <meta name="keywords" content="AI4Change, origin story, Playing for Change, AI, open source, social impact, movement, global community, equalizer">
+    <meta name="author" content="AI4Change Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ai4change-org.github.io/blog/001-why-ai4change.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Why AI4Change Exists",
+        "description": "The origin story of AI4Change — how Playing for Change inspired a global open-source movement that uses AI as the instrument to solve humanity's most pressing problems.",
+        "url": "https://ai4change-org.github.io/blog/001-why-ai4change.html",
+        "datePublished": "2026-03-28",
+        "author": {
+            "@type": "Organization",
+            "name": "AI4Change Team",
+            "url": "https://ai4change-org.github.io"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AI4Change",
+            "url": "https://ai4change-org.github.io",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://ai4change-org.github.io/assets/favicon.svg"
+            }
+        },
+        "isPartOf": {
+            "@type": "Blog",
+            "name": "AI4Change Blog",
+            "url": "https://ai4change-org.github.io/blog/"
+        },
+        "articleSection": "Origin Story",
+        "wordCount": 1600
+    }
+    </script>
+
+    <style>
+        /* ============================================================
+           AI4CHANGE — Blog Post Styles
+           ============================================================ */
+        :root {
+            --brand-primary: #00D4AA;
+            --brand-secondary: #7C3AED;
+            --brand-accent: #FF6B35;
+            --brand-dark: #0A0E1A;
+            --brand-light: #F0FDF9;
+            --brand-muted: #94A3B8;
+            --gradient-hero: linear-gradient(135deg, #0A0E1A 0%, #1A1040 40%, #0D2847 100%);
+            --gradient-glow: linear-gradient(135deg, #00D4AA, #7C3AED);
+            --gradient-warm: linear-gradient(135deg, #FF6B35, #FF3CAC);
+            --section-padding: clamp(5rem, 12vw, 9rem);
+        }
+
+        [data-theme="dark"] {
+            --bg: #0A0E1A;
+            --text: #E2E8F0;
+            --text-muted: #94A3B8;
+            --card-bg: rgba(255,255,255,0.025);
+            --card-border: rgba(255,255,255,0.06);
+            --nav-bg: rgba(10, 14, 26, 0.6);
+            --nav-scrolled: rgba(10, 14, 26, 0.92);
+        }
+        [data-theme="light"] {
+            --bg: #FAFCFF;
+            --text: #1A202C;
+            --text-muted: #64748B;
+            --card-bg: rgba(0,0,0,0.02);
+            --card-border: rgba(0,0,0,0.08);
+            --nav-bg: rgba(250, 252, 255, 0.85);
+            --nav-scrolled: rgba(250, 252, 255, 0.95);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ============================================================
+           SCROLL ANIMATIONS
+           ============================================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* ============================================================
+           NAVIGATION
+           ============================================================ */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--nav-bg);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--card-border);
+            transition: all 0.4s;
+        }
+
+        nav.scrolled {
+            padding: 0.75rem 2rem;
+            background: var(--nav-scrolled);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .nav-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--brand-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-glow);
+            transition: width 0.3s;
+            border-radius: 1px;
+        }
+        .nav-links a:hover { color: #fff; }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: var(--brand-primary); }
+        .nav-links a.active::after { width: 100%; }
+
+        .nav-cta {
+            background: var(--gradient-glow) !important;
+            color: var(--brand-dark) !important;
+            padding: 0.55rem 1.5rem;
+            border-radius: 100px;
+            font-weight: 600 !important;
+            transition: transform 0.3s, box-shadow 0.3s !important;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 212, 170, 0.35);
+        }
+
+        /* Mobile menu */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+            z-index: 1001;
+        }
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 14, 26, 0.98);
+            backdrop-filter: blur(24px);
+            z-index: 999;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a {
+            color: #E2E8F0;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .mobile-menu a:hover { color: var(--brand-primary); }
+
+        /* ============================================================
+           PARTICLE CANVAS
+           ============================================================ */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ============================================================
+           BUTTONS
+           ============================================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2.25rem;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--gradient-glow);
+            color: var(--brand-dark);
+            box-shadow: 0 4px 20px rgba(0, 212, 170, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 212, 170, 0.4);
+        }
+
+        .btn-ghost {
+            background: rgba(255,255,255,0.06);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-2px);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .btn-accent {
+            background: var(--gradient-warm);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        }
+        .btn-accent:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #7C3AED, #5B21B6);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+        }
+        .btn-secondary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(124, 58, 237, 0.4);
+        }
+
+        /* ============================================================
+           THEME TOGGLE
+           ============================================================ */
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--card-border);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: border-color 0.3s, transform 0.3s;
+            color: var(--text-muted);
+        }
+        .theme-toggle:hover { border-color: var(--brand-primary); transform: rotate(30deg); }
+
+        /* ============================================================
+           ARTICLE HERO
+           ============================================================ */
+        .article-hero {
+            min-height: 50vh;
+            background: var(--gradient-hero);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            padding: 10rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-hero-glow-1 {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 212, 170, 0.1), transparent 70%);
+            top: -200px;
+            right: -300px;
+            animation: heroFloat 12s ease-in-out infinite;
+            filter: blur(40px);
+        }
+        .article-hero-glow-2 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.08), transparent 70%);
+            bottom: -150px;
+            left: -200px;
+            animation: heroFloat 16s ease-in-out infinite reverse;
+            filter: blur(40px);
+        }
+        .article-hero-glow-3 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.06), transparent 70%);
+            top: 40%;
+            left: 10%;
+            animation: heroFloat 10s ease-in-out infinite 2s;
+            filter: blur(30px);
+        }
+
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-40px) scale(1.08); }
+        }
+
+        .article-hero-inner {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--brand-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s;
+        }
+        .back-link:hover { color: var(--brand-primary); }
+        .back-link svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: rgba(255, 107, 53, 0.12);
+            color: var(--brand-accent);
+            border: 1px solid rgba(255, 107, 53, 0.25);
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .gradient-text {
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            color: var(--brand-muted);
+            font-size: 0.85rem;
+        }
+
+        .article-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .article-meta-item svg {
+            width: 15px;
+            height: 15px;
+            fill: currentColor;
+            opacity: 0.7;
+        }
+
+        .meta-divider {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: var(--brand-muted);
+            opacity: 0.4;
+        }
+
+        /* ============================================================
+           SHARE BAR
+           ============================================================ */
+        .share-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1.5rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .share-bar-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--brand-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-right: 0.25rem;
+        }
+
+        .share-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-muted);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        .share-btn:hover {
+            background: rgba(0, 212, 170, 0.1);
+            border-color: rgba(0, 212, 170, 0.25);
+            color: var(--brand-primary);
+            transform: translateY(-2px);
+        }
+        .share-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .share-btn.copied {
+            background: rgba(0, 212, 170, 0.15);
+            border-color: rgba(0, 212, 170, 0.35);
+            color: var(--brand-primary);
+        }
+
+        /* ============================================================
+           ARTICLE BODY
+           ============================================================ */
+        .article-body {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body p {
+            font-size: 1.1rem;
+            line-height: 1.85;
+            color: var(--text-muted);
+            margin-bottom: 1.75rem;
+        }
+
+        .article-body p.lead {
+            font-size: 1.3rem;
+            line-height: 1.75;
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .article-body h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            margin-top: 3.5rem;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .article-body h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .article-body .highlight {
+            color: var(--brand-primary);
+            font-weight: 600;
+        }
+
+        .article-body .highlight-violet {
+            color: var(--brand-secondary);
+            font-weight: 600;
+        }
+
+        .article-body .highlight-coral {
+            color: var(--brand-accent);
+            font-weight: 600;
+        }
+
+        .article-body blockquote {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            font-weight: 600;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 2.5rem 0;
+            padding: 2rem 2.5rem;
+            position: relative;
+            border-left: 3px solid;
+            border-image: var(--gradient-glow) 1;
+            background: rgba(0, 212, 170, 0.03);
+            border-radius: 0 16px 16px 0;
+        }
+
+        .article-body blockquote p {
+            font-size: inherit;
+            line-height: inherit;
+            color: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            margin-bottom: 0;
+        }
+
+        .article-body hr {
+            border: none;
+            height: 1px;
+            background: var(--card-border);
+            margin: 3rem 0;
+        }
+
+        .article-body a {
+            color: var(--brand-primary);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.3s;
+        }
+        .article-body a:hover {
+            color: var(--brand-secondary);
+        }
+
+        /* ============================================================
+           NEXT POST CARD
+           ============================================================ */
+        .next-post-section {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .next-post-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--brand-muted);
+            margin-bottom: 1rem;
+        }
+
+        .next-post-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2rem 2.5rem;
+            text-decoration: none;
+            display: block;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .next-post-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-glow);
+            border-radius: 20px 20px 0 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .next-post-card:hover::before { opacity: 1; }
+        .next-post-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            border-color: rgba(0, 212, 170, 0.2);
+        }
+
+        .next-post-card .next-post-category {
+            display: inline-block;
+            background: rgba(124, 58, 237, 0.1);
+            color: var(--brand-secondary);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.75rem;
+        }
+
+        .next-post-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .next-post-card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .next-post-arrow {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            color: var(--brand-primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: gap 0.3s;
+        }
+        .next-post-card:hover .next-post-arrow { gap: 0.65rem; }
+        .next-post-arrow svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* ============================================================
+           CTA SECTION
+           ============================================================ */
+        .cta-section {
+            text-align: center;
+            padding: var(--section-padding) 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(0, 212, 170, 0.06), transparent 70%);
+        }
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.08), transparent 70%);
+            top: -100px;
+            right: -100px;
+            filter: blur(40px);
+        }
+
+        .cta-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-section > p {
+            color: var(--brand-muted);
+            font-size: 1.15rem;
+            max-width: 560px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.65;
+            position: relative;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        footer {
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem 3rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-brand .nav-logo {
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 1.35rem;
+        }
+        .footer-brand p {
+            color: var(--brand-muted);
+            font-size: 0.9rem;
+            line-height: 1.65;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #E2E8F0;
+            margin-bottom: 1.25rem;
+        }
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        .footer-col a {
+            color: var(--brand-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-col a:hover { color: var(--brand-primary); }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid rgba(255,255,255,0.04);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-bottom p {
+            color: var(--brand-muted);
+            font-size: 0.8rem;
+        }
+        .footer-bottom a {
+            color: var(--brand-primary);
+            text-decoration: none;
+        }
+        .footer-bottom a:hover { text-decoration: underline; }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        .footer-social a {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-muted);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .footer-social a:hover {
+            background: rgba(0, 212, 170, 0.1);
+            border-color: rgba(0, 212, 170, 0.2);
+            color: var(--brand-primary);
+        }
+        .footer-social a svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* ============================================================
+           LIGHT MODE OVERRIDES
+           ============================================================ */
+        [data-theme="light"] .article-hero { background: linear-gradient(135deg, #F0FDF9 0%, #EDE9FE 40%, #E0F2FE 100%); }
+        [data-theme="light"] .article-hero h1 { color: var(--brand-dark); }
+        [data-theme="light"] .article-body blockquote { color: var(--text); }
+        [data-theme="light"] .article-body p.lead { color: var(--text); }
+        [data-theme="light"] .mobile-toggle span { background: var(--text); }
+        [data-theme="light"] .mobile-menu { background: rgba(250, 252, 255, 0.98); }
+        [data-theme="light"] .mobile-menu a { color: var(--text); }
+        [data-theme="light"] .next-post-card { background: var(--card-bg); border-color: var(--card-border); }
+        [data-theme="light"] .next-post-card:hover { box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08); }
+        [data-theme="light"] .btn-ghost { background: rgba(0,0,0,0.04); color: var(--text); border-color: rgba(0,0,0,0.1); }
+        [data-theme="light"] .btn-ghost:hover { background: rgba(0,0,0,0.08); }
+        [data-theme="light"] .share-btn { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.08); }
+        [data-theme="light"] .share-btn:hover { background: rgba(0, 212, 170, 0.08); }
+        [data-theme="light"] #particles-canvas { opacity: 0.3; }
+        [data-theme="light"] .footer-col h4 { color: var(--text); }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: flex; }
+
+            .article-hero { padding: 7rem 1.5rem 3rem; min-height: 40vh; }
+            .article-hero h1 { font-size: clamp(1.8rem, 7vw, 2.8rem); }
+
+            .article-body { padding: 2rem 1.5rem 3rem; }
+            .article-body p { font-size: 1rem; line-height: 1.8; }
+            .article-body p.lead { font-size: 1.15rem; }
+            .article-body blockquote { font-size: 1.1rem; padding: 1.5rem 1.75rem; }
+            .article-body h2 { font-size: 1.4rem; margin-top: 2.5rem; }
+
+            .share-bar { gap: 0.5rem; padding: 1rem 1.5rem; }
+
+            .next-post-section { padding: 0 1.5rem 3rem; }
+            .next-post-card { padding: 1.5rem 1.75rem; }
+
+            .cta-section { padding: clamp(3rem, 8vw, 5rem) 1.5rem; }
+
+            .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+
+            .article-meta { gap: 0.75rem; }
+        }
+
+        @media (max-width: 480px) {
+            nav { padding: 0.75rem 1rem; }
+            .article-hero { padding: 6rem 1rem 2.5rem; }
+            .btn { padding: 0.85rem 1.75rem; font-size: 0.9rem; }
+            .cta-actions { flex-direction: column; align-items: center; }
+            .next-post-card { padding: 1.25rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="/" class="nav-logo">AI4Change</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/manifesto.html">Manifesto</a>
+            <a href="/problems.html">Problems</a>
+            <a href="/blog/" class="active">Blog</a>
+            <a href="/join.html">Join</a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="theme-icon">&#9790;</span></button>
+            <a href="/join.html" class="nav-cta">Get Involved</a>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/manifesto.html">Manifesto</a>
+        <a href="/problems.html">Problems</a>
+        <a href="/blog/">Blog</a>
+        <a href="/join.html">Join</a>
+        <a href="/join.html" class="btn btn-primary" style="margin-top:1rem;">Get Involved</a>
+    </div>
+
+    <!-- ============================================================
+         ARTICLE HERO
+         ============================================================ -->
+    <header class="article-hero">
+        <div class="article-hero-glow-1"></div>
+        <div class="article-hero-glow-2"></div>
+        <div class="article-hero-glow-3"></div>
+
+        <div class="article-hero-inner">
+            <a href="/blog/" class="back-link reveal">
+                <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                Back to Blog
+            </a>
+
+            <div class="article-category reveal reveal-delay-1">Origin Story</div>
+
+            <h1 class="reveal reveal-delay-2">Why <span class="gradient-text">AI4Change</span> Exists</h1>
+
+            <div class="article-meta reveal reveal-delay-3">
+                <span class="article-meta-item">
+                    <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
+                    March 28, 2026
+                </span>
+                <span class="meta-divider"></span>
+                <span class="article-meta-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    AI4Change Team
+                </span>
+                <span class="meta-divider"></span>
+                <span class="article-meta-item">
+                    <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    8 min read
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         SHARE BAR
+         ============================================================ -->
+    <div class="share-bar reveal">
+        <span class="share-bar-label">Share</span>
+        <a href="https://twitter.com/intent/tweet?text=Why%20AI4Change%20Exists%20%E2%80%94%20the%20origin%20story%20of%20a%20global%20movement%20using%20AI%20to%20solve%20real%20problems&url=https://ai4change-org.github.io/blog/001-why-ai4change.html&via=ai4changeorg" target="_blank" rel="noopener" class="share-btn" aria-label="Share on Twitter">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://ai4change-org.github.io/blog/001-why-ai4change.html" target="_blank" rel="noopener" class="share-btn" aria-label="Share on LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <button class="share-btn" id="copyLinkBtn" aria-label="Copy link">
+            <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+        </button>
+    </div>
+
+    <!-- ============================================================
+         ARTICLE BODY
+         ============================================================ -->
+    <article class="article-body">
+
+        <p class="lead reveal">
+            It started with a YouTube video. Late at night, the kind of hour where the algorithm knows you better than you know yourself. A street musician in New Orleans, weathered hands on a guitar, singing "Stand by Me." Nothing fancy. Just truth.
+        </p>
+
+        <p class="reveal">
+            Then something happened. Another musician appeared &mdash; this one from <span class="highlight-coral">Barcelona</span>, adding a cello line that wove into the melody like it had always been there. Then a woman's voice from <span class="highlight-coral">Mumbai</span>. A choir from <span class="highlight-coral">Moscow</span>. Drums from the <span class="highlight-coral">Congo</span>. Different languages. Different instruments. Different lives lived in different worlds. But one voice. One song that somehow made the planet feel smaller and more connected than any fiber optic cable ever had.
+        </p>
+
+        <p class="reveal">
+            That was <span class="highlight-coral">Playing for Change</span>.
+        </p>
+
+        <p class="reveal">
+            If you haven't seen it, stop reading and go watch it. Then come back. Because that video isn't just beautiful &mdash; it's a <em>proof of concept</em>.
+        </p>
+
+        <h2 class="reveal">The Proof That Changed Everything</h2>
+
+        <p class="reveal">
+            Playing for Change proved something radical: that <span class="highlight">ordinary people, connected by nothing more than shared purpose and an open invitation, could create something extraordinary</span>. Not a corporation with a quarterly earnings call. Not an institution with a board of directors. A movement. They used music as the universal language &mdash; the thing that needed no translation, no credential, no permission slip.
+        </p>
+
+        <p class="reveal">
+            And then came the question that wouldn't leave.
+        </p>
+
+        <blockquote class="reveal">
+            <p>What if we could do the same thing &mdash; not with music, but with problem-solving? What if AI could be the instrument?</p>
+        </blockquote>
+
+        <p class="reveal">
+            Music doesn't care where you were born. It doesn't ask for your r&eacute;sum&eacute;. It doesn't check your passport. Playing for Change worked because the invitation was universal: <em>if you can play, you're in</em>. The song connected everyone. The recording technology made it possible for musicians who would never physically meet to create together.
+        </p>
+
+        <p class="reveal">
+            Now replace "music" with "problem-solving." Replace "the song" with "humanity's hardest challenges." Replace "recording technology" with <span class="highlight-violet">artificial intelligence</span>.
+        </p>
+
+        <p class="reveal">
+            The parallel is too perfect to ignore.
+        </p>
+
+        <h2 class="reveal">The Moment We're Living In</h2>
+
+        <p class="reveal">
+            Here is the thing about this exact moment in history that keeps us up at night:
+        </p>
+
+        <p class="reveal">
+            <span class="highlight">For the first time ever, a teenager in rural Indonesia has access to the same cognitive horsepower as a Fortune 500 engineer.</span> A community organizer in Lagos can build the same sophisticated data pipeline as a Silicon Valley startup. A retired teacher in rural Appalachia can analyze climate patterns with the same precision as a university research lab.
+        </p>
+
+        <p class="reveal">
+            AI didn't just level the playing field. It <span class="highlight-violet">obliterated</span> it.
+        </p>
+
+        <p class="reveal">
+            Think about what that means. For the entire history of human civilization, the ability to solve complex problems at scale was locked behind walls: expensive education, institutional access, geographic luck, capital. The people with the deepest understanding of problems &mdash; the farmer who knows the soil, the nurse who sees the patterns, the community leader who understands the real dynamics &mdash; were almost never the ones with the technical firepower to build solutions.
+        </p>
+
+        <p class="reveal">
+            That wall just fell.
+        </p>
+
+        <h2 class="reveal">The Gap That Shouldn't Exist</h2>
+
+        <p class="reveal">
+            And yet.
+        </p>
+
+        <p class="reveal">
+            The world's biggest problems &mdash; <span class="highlight-coral">climate adaptation, healthcare access, educational equity, food security, clean water, disaster response</span> &mdash; are still being "solved" by the same small group of institutions, in the same closed rooms, with the same blind spots they've always had.
+        </p>
+
+        <p class="reveal">
+            The farmer in Kenya who has spent thirty years reading the soil and watching the rainfall patterns shift? She's not at the table. The community health worker in Bangladesh who has cataloged every waterborne illness in her district for a decade? He's not at the table. The teenager in the Philippines who taught herself machine learning from YouTube and has ideas that would make PhD researchers blink? She's not at the table.
+        </p>
+
+        <p class="reveal">
+            <span class="highlight">The people closest to the problems are almost never at the table where the solutions are built.</span>
+        </p>
+
+        <p class="reveal">
+            That's not just inefficient. It's absurd. And now, for the first time, it's also <em>unnecessary</em>.
+        </p>
+
+        <h2 class="reveal">What AI4Change Is</h2>
+
+        <p class="reveal">
+            AI4Change exists to change that equation. Permanently.
+        </p>
+
+        <p class="reveal">
+            We don't start with technology. We don't start with a model architecture or a framework or a tech stack. We start with <span class="highlight">problems</span> &mdash; real problems, submitted by real people who live them every single day. A farmer posts about soil degradation patterns she can't explain. A clinic worker describes how patients fall through cracks in the referral system. A teacher explains how students in her region lose six months of learning every monsoon season.
+        </p>
+
+        <p class="reveal">
+            Then we <span class="highlight-violet">open-source the entire process of solving them</span>.
+        </p>
+
+        <p class="reveal">
+            The farmer who understands the soil. The data scientist who knows how to build a prediction model. The designer who can make it usable on a cheap smartphone. The doctor who sees the clinical patterns. The student with the fresh perspective and no legacy assumptions. And the AI that connects them all &mdash; translating between disciplines, scaling the analysis, bridging the gaps that would otherwise make collaboration across continents impossible.
+        </p>
+
+        <blockquote class="reveal">
+            <p>Playing for Change connected musicians who had never met to create one song. AI4Change connects problem-solvers who have never met to build one solution.</p>
+        </blockquote>
+
+        <p class="reveal">
+            Every solution is documented. Filmed. Shared. Not because we like content &mdash; but because the most powerful thing about Playing for Change was never just the music. It was <em>seeing the musician's face</em>. Knowing their name. Understanding their world. We do the same for problem-solvers. Every project becomes a story. Every contributor becomes visible.
+        </p>
+
+        <h2 class="reveal">What This Is Not</h2>
+
+        <p class="reveal">
+            This is not a company. There is no Series A. There is no pitch deck with a hockey stick graph. There are no shareholders.
+        </p>
+
+        <p class="reveal">
+            This is not a product. You cannot buy it. It is not a SaaS platform with a pricing page and a free tier designed to create dependency.
+        </p>
+
+        <p class="reveal">
+            This is not charity. We are not here to "help" from a position of privilege. We are here to build &mdash; together, as equals, in the open, with the people who understand the problems best leading the way.
+        </p>
+
+        <p class="reveal">
+            This is <span class="highlight">an open invitation</span>.
+        </p>
+
+        <hr class="reveal">
+
+        <h2 class="reveal">The Invitation</h2>
+
+        <p class="reveal">
+            If you're an engineer who's tired of optimizing ad clicks and wants to build something that matters &mdash; welcome.
+        </p>
+
+        <p class="reveal">
+            If you're a community worker who has been screaming about a problem for years and nobody with technical resources is listening &mdash; welcome.
+        </p>
+
+        <p class="reveal">
+            If you're a student who just discovered what AI can do and wants to aim it at something bigger than a side project &mdash; welcome.
+        </p>
+
+        <p class="reveal">
+            If you're a designer, a data scientist, a farmer, a doctor, a storyteller, a translator, a teacher, or just someone who believes that the most powerful solutions emerge when the whole world gets to participate in building them &mdash; welcome.
+        </p>
+
+        <p class="reveal">
+            <span class="highlight">You're already part of this.</span>
+        </p>
+
+        <blockquote class="reveal">
+            <p>The song is playing. The instrument is ready. All that's missing is your voice.</p>
+        </blockquote>
+
+    </article>
+
+    <!-- ============================================================
+         NEXT POST
+         ============================================================ -->
+    <div class="next-post-section reveal">
+        <div class="next-post-label">Up Next</div>
+        <a href="/blog/002-first-five-problems.html" class="next-post-card">
+            <span class="next-post-category">Deep Dive</span>
+            <h3>The First Five Problems</h3>
+            <p>Real problems, submitted by real people. Here are the first five challenges the AI4Change community is taking on &mdash; and why they were chosen.</p>
+            <span class="next-post-arrow">
+                Read next
+                <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </span>
+        </a>
+    </div>
+
+    <!-- ============================================================
+         CTA SECTION
+         ============================================================ -->
+    <section class="cta-section reveal">
+        <h2>Join the <span class="gradient-text">Movement</span></h2>
+        <p>The problems are real. The tools are ready. The invitation is open. The only missing piece is you.</p>
+        <div class="cta-actions">
+            <a href="https://github.com/ai4change-org/problems/issues/new" class="btn btn-primary" target="_blank" rel="noopener">Submit a Problem</a>
+            <a href="https://github.com/ai4change-org" class="btn btn-secondary" target="_blank" rel="noopener">Star on GitHub</a>
+            <a href="https://github.com/orgs/ai4change-org/discussions" class="btn btn-ghost" target="_blank" rel="noopener">Start a Discussion</a>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="/" class="nav-logo">AI4Change</a>
+                <p>A global open-source movement where real people use AI as their instrument to solve humanity's most pressing problems. Together.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Movement</h4>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/manifesto.html">Manifesto</a></li>
+                    <li><a href="/problems.html">Problems</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/join.html">Join</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Build</h4>
+                <ul>
+                    <li><a href="https://github.com/ai4change-org/problems/issues" target="_blank" rel="noopener">Problems Board</a></li>
+                    <li><a href="https://github.com/ai4change-org" target="_blank" rel="noopener">GitHub Org</a></li>
+                    <li><a href="https://github.com/orgs/ai4change-org/discussions" target="_blank" rel="noopener">Discussions</a></li>
+                    <li><a href="https://github.com/ai4change-org/problems/issues/new" target="_blank" rel="noopener">Submit a Problem</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://github.com/ai4change-org" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://twitter.com/ai4changeorg" target="_blank" rel="noopener">X / Twitter</a></li>
+                    <li><a href="https://linkedin.com/company/ai4change" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://youtube.com/@ai4change" target="_blank" rel="noopener">YouTube</a></li>
+                    <li><a href="https://discord.gg/ai4change" target="_blank" rel="noopener">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Built with &#x2764;&#xFE0F; by the community &middot; &copy; 2026 AI4Change Contributors &middot; <a href="https://github.com/ai4change-org">MIT License</a></p>
+            <div class="footer-social">
+                <a href="https://github.com/ai4change-org" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+                <a href="https://twitter.com/ai4changeorg" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="https://linkedin.com/company/ai4change" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                <a href="https://youtube.com/@ai4change" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         JAVASCRIPT
+         ============================================================ -->
+    <script>
+    (function() {
+        'use strict';
+
+        // ---- Particle Background ----
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animFrame;
+        let w, h;
+
+        function resize() {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * w;
+                this.y = Math.random() * h;
+                this.vx = (Math.random() - 0.5) * 0.3;
+                this.vy = (Math.random() - 0.5) * 0.3;
+                this.r = Math.random() * 1.5 + 0.5;
+                this.alpha = Math.random() * 0.4 + 0.1;
+                const colors = ['0, 212, 170', '124, 58, 237', '255, 107, 53'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > w) this.vx *= -1;
+                if (this.y < 0 || this.y > h) this.vy *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            const count = Math.min(Math.floor((w * h) / 18000), 80);
+            particles = [];
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function drawLines() {
+            const maxDist = 150;
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < maxDist) {
+                        const opacity = (1 - dist / maxDist) * 0.12;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(0, 212, 170, ${opacity})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, w, h);
+            particles.forEach(p => { p.update(); p.draw(); });
+            drawLines();
+            animFrame = requestAnimationFrame(animate);
+        }
+
+        resize();
+        initParticles();
+        animate();
+        window.addEventListener('resize', () => { resize(); initParticles(); });
+
+        // ---- Scroll Reveal ----
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // ---- Navbar scroll effect ----
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+
+        // ---- Mobile menu ----
+        window.closeMobile = function() {
+            document.getElementById('mobileMenu').classList.remove('active');
+            document.getElementById('mobileToggle').classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            const isActive = menu.classList.toggle('active');
+            this.classList.toggle('active');
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+
+        document.querySelectorAll('#mobileMenu a').forEach(a => {
+            a.addEventListener('click', closeMobile);
+        });
+
+        // ---- Smooth scroll for anchor links ----
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = navbar.offsetHeight + 16;
+                    const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ---- Dark/Light Theme Toggle ----
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        function updateIcon() {
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            document.querySelectorAll('.theme-icon').forEach(el => {
+                el.textContent = isDark ? '\u263E' : '\u2600';
+            });
+        }
+
+        function toggleTheme() {
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('ai4c-theme', next);
+            updateIcon();
+        }
+
+        const savedTheme = localStorage.getItem('ai4c-theme');
+        if (savedTheme) html.setAttribute('data-theme', savedTheme);
+        updateIcon();
+        if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+
+        // ---- Copy Link Button ----
+        const copyBtn = document.getElementById('copyLinkBtn');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', function() {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    copyBtn.classList.add('copied');
+                    const originalHTML = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
+                    setTimeout(() => {
+                        copyBtn.classList.remove('copied');
+                        copyBtn.innerHTML = originalHTML;
+                    }, 2000);
+                });
+            });
+        }
+
+    })();
+
+    // ---- Service Worker Registration ----
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+    }
+    </script>
+
+</body>
+</html>
