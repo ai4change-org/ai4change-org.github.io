@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 627" width="1200" height="627">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0E1A"/>
+      <stop offset="35%" style="stop-color:#12082E"/>
+      <stop offset="100%" style="stop-color:#0D2847"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4AA"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4AA"/>
+      <stop offset="50%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#FF6B35"/>
+    </linearGradient>
+    <radialGradient id="o1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00D4AA;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#00D4AA;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="o2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:0.08"/>
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  
+  <rect width="1200" height="627" fill="url(#bg)"/>
+  
+  <!-- Ambient -->
+  <circle cx="950" cy="150" r="300" fill="url(#o1)"/>
+  <circle cx="250" cy="500" r="250" fill="url(#o2)"/>
+  
+  <!-- Globe network (center-right) -->
+  <g transform="translate(850, 320)" opacity="0.5">
+    <circle cx="0" cy="0" r="180" fill="none" stroke="#00D4AA" stroke-width="1" opacity="0.12"/>
+    <circle cx="0" cy="0" r="130" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.12"/>
+    <ellipse cx="0" cy="0" rx="180" ry="70" fill="none" stroke="#00D4AA" stroke-width="0.8" opacity="0.08"/>
+    <ellipse cx="0" cy="0" rx="70" ry="180" fill="none" stroke="#7C3AED" stroke-width="0.8" opacity="0.08"/>
+    
+    <circle cx="-120" cy="-100" r="7" fill="#00D4AA" opacity="0.7"/>
+    <circle cx="130" cy="-60" r="6" fill="#7C3AED" opacity="0.7"/>
+    <circle cx="80" cy="120" r="7" fill="#FF6B35" opacity="0.7"/>
+    <circle cx="-140" cy="50" r="6" fill="#00D4AA" opacity="0.6"/>
+    <circle cx="40" cy="-140" r="5" fill="#7C3AED" opacity="0.6"/>
+    <circle cx="-60" cy="130" r="6" fill="#FF6B35" opacity="0.6"/>
+    <circle cx="150" cy="40" r="5" fill="#00D4AA" opacity="0.5"/>
+    <circle cx="-40" cy="-80" r="5" fill="#7C3AED" opacity="0.5"/>
+    
+    <line x1="-120" y1="-100" x2="130" y2="-60" stroke="#00D4AA" stroke-width="0.8" opacity="0.15"/>
+    <line x1="130" y1="-60" x2="80" y2="120" stroke="#7C3AED" stroke-width="0.8" opacity="0.15"/>
+    <line x1="-140" y1="50" x2="80" y2="120" stroke="#FF6B35" stroke-width="0.8" opacity="0.15"/>
+    <line x1="-120" y1="-100" x2="-60" y2="130" stroke="#00D4AA" stroke-width="0.8" opacity="0.12"/>
+    <line x1="40" y1="-140" x2="-140" y2="50" stroke="#7C3AED" stroke-width="0.8" opacity="0.12"/>
+    <line x1="40" y1="-140" x2="150" y2="40" stroke="#00D4AA" stroke-width="0.8" opacity="0.1"/>
+    <line x1="-40" y1="-80" x2="150" y2="40" stroke="#FF6B35" stroke-width="0.8" opacity="0.1"/>
+    
+    <circle cx="0" cy="0" r="15" fill="url(#g1)" opacity="0.5"/>
+    <circle cx="0" cy="0" r="7" fill="#fff" opacity="0.8"/>
+  </g>
+  
+  <!-- Main content (left side) -->
+  <!-- Eyebrow -->
+  <text x="80" y="130" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-weight="600" font-size="16" fill="#00D4AA" letter-spacing="0.2em">INTRODUCING</text>
+  
+  <!-- Title -->
+  <text x="80" y="210" font-family="'Space Grotesk', 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="80" fill="url(#g1)">AI4CHANGE</text>
+  
+  <!-- Subtitle -->
+  <text x="84" y="270" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-weight="400" font-size="30" fill="#E2E8F0">AI as the Great Equalizer</text>
+  
+  <!-- Divider -->
+  <rect x="80" y="295" width="350" height="3" rx="1.5" fill="url(#g2)" opacity="0.4"/>
+  
+  <!-- Description -->
+  <text x="84" y="340" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-weight="300" font-size="20" fill="#94A3B8">Real people from around the world,</text>
+  <text x="84" y="370" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-weight="300" font-size="20" fill="#94A3B8">each using AI as their instrument to solve</text>
+  <text x="84" y="400" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-weight="300" font-size="20" fill="#94A3B8">humanity's most pressing problems.</text>
+  
+  <!-- Tags -->
+  <g transform="translate(84, 435)">
+    <rect x="0" y="0" width="145" height="36" rx="18" fill="#00D4AA" opacity="0.12" stroke="#00D4AA" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="72" y="23" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#00D4AA" text-anchor="middle">🌍 Open Source</text>
+    
+    <rect x="160" y="0" width="175" height="36" rx="18" fill="#7C3AED" opacity="0.12" stroke="#7C3AED" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="247" y="23" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#7C3AED" text-anchor="middle">🤝 Community Driven</text>
+    
+    <rect x="350" y="0" width="145" height="36" rx="18" fill="#FF6B35" opacity="0.12" stroke="#FF6B35" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="422" y="23" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#FF6B35" text-anchor="middle">🤖 AI Powered</text>
+  </g>
+  
+  <!-- Bottom bar -->
+  <rect x="0" y="570" width="1200" height="57" fill="rgba(0,0,0,0.3)"/>
+  <text x="80" y="605" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-weight="500" font-size="18" fill="#64748B">ai4change-org.github.io</text>
+  <text x="1120" y="605" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#00D4AA" text-anchor="end">Join the Movement →</text>
+</svg>
