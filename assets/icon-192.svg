@@ -1,12 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="tv" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00D4AA"/>
       <stop offset="100%" stop-color="#7C3AED"/>
     </linearGradient>
+    <linearGradient id="vc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#FF6B35"/>
+    </linearGradient>
+    <radialGradient id="rg" cx="50%" cy="48%" r="50%">
+      <stop offset="0%" stop-color="#00D4AA" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0A0E1A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="ng">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
   </defs>
+  <!-- Background -->
   <rect width="192" height="192" rx="40" fill="#0A0E1A"/>
-  <circle cx="96" cy="86" r="50" fill="none" stroke="url(#g)" stroke-width="4"/>
-  <path d="M70 86 L96 60 L122 86 M96 60 V120" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="96" y="160" text-anchor="middle" fill="#00D4AA" font-family="sans-serif" font-size="18" font-weight="700">AI4C</text>
+  <!-- Ambient glow -->
+  <rect width="192" height="192" rx="40" fill="url(#rg)"/>
+  <!-- Globe ring -->
+  <circle cx="96" cy="88" r="52" fill="none" stroke="url(#tv)" stroke-width="2.2" opacity="0.3"/>
+  <!-- Latitude -->
+  <ellipse cx="96" cy="88" rx="52" ry="18" fill="none" stroke="#00D4AA" stroke-width="0.8" opacity="0.12"/>
+  <!-- Longitude -->
+  <ellipse cx="96" cy="88" rx="18" ry="52" fill="none" stroke="#00D4AA" stroke-width="0.8" opacity="0.12"/>
+  <!-- Neural connection glow -->
+  <g filter="url(#ng)" opacity="0.35">
+    <line x1="68" y1="70" x2="90" y2="82" stroke="#00D4AA" stroke-width="3"/>
+    <line x1="90" y1="82" x2="120" y2="68" stroke="#00D4AA" stroke-width="3"/>
+    <line x1="90" y1="82" x2="108" y2="108" stroke="#7C3AED" stroke-width="3"/>
+    <line x1="68" y1="70" x2="76" y2="104" stroke="#00D4AA" stroke-width="3"/>
+  </g>
+  <!-- Neural connections -->
+  <line x1="68" y1="70" x2="90" y2="82" stroke="url(#tv)" stroke-width="2" opacity="0.7" stroke-linecap="round"/>
+  <line x1="90" y1="82" x2="120" y2="68" stroke="url(#tv)" stroke-width="2" opacity="0.7" stroke-linecap="round"/>
+  <line x1="90" y1="82" x2="108" y2="108" stroke="url(#vc)" stroke-width="1.8" opacity="0.6" stroke-linecap="round"/>
+  <line x1="68" y1="70" x2="76" y2="104" stroke="url(#tv)" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+  <line x1="76" y1="104" x2="108" y2="108" stroke="url(#vc)" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+  <line x1="120" y1="68" x2="108" y2="108" stroke="#7C3AED" stroke-width="1.2" opacity="0.4" stroke-linecap="round"/>
+  <!-- Neural nodes -->
+  <circle cx="68" cy="70" r="5" fill="#00D4AA"/>
+  <circle cx="90" cy="82" r="6.5" fill="url(#tv)"/>
+  <circle cx="120" cy="68" r="4.5" fill="#7C3AED"/>
+  <circle cx="76" cy="104" r="4" fill="#00D4AA"/>
+  <circle cx="108" cy="108" r="5" fill="#FF6B35"/>
+  <!-- Central highlight -->
+  <circle cx="90" cy="82" r="2.8" fill="white" opacity="0.35"/>
+  <!-- AI4C text -->
+  <text x="96" y="162" text-anchor="middle" font-family="'Space Grotesk', 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="-0.5">
+    <tspan fill="url(#tv)">AI</tspan><tspan fill="#E2E8F0">4</tspan><tspan fill="url(#tv)">C</tspan>
+  </text>
 </svg>

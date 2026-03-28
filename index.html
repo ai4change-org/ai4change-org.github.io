@@ -148,6 +148,14 @@
             background-clip: text;
             text-decoration: none;
             letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-logo-img {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
         }
 
         .nav-links {
@@ -303,6 +311,18 @@
             left: 15%;
             animation: heroFloat 10s ease-in-out infinite 2s;
             filter: blur(30px);
+        }
+        .hero-illustration {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1400px;
+            height: auto;
+            opacity: 0.45;
+            pointer-events: none;
+            z-index: 0;
         }
 
         @keyframes heroFloat {
@@ -1413,6 +1433,7 @@
         .problem-card:nth-child(3)::before { background: linear-gradient(135deg, #7C3AED, #00D4AA); }
         .problem-card:nth-child(4)::before { background: linear-gradient(135deg, #FF6B35, #7C3AED); }
         .problem-card:nth-child(5)::before { background: linear-gradient(135deg, #00D4AA, #FF6B35); }
+        .problem-card:nth-child(6)::before { background: linear-gradient(135deg, #5B8DEF, #00D4AA); }
 
         .problem-card:hover {
             transform: translateY(-6px);
@@ -1434,6 +1455,12 @@
             margin-bottom: 0.6rem;
         }
         .problem-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin-bottom: 1rem; }
+        .problem-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
         .problem-tag {
             display: inline-block;
             padding: 0.2rem 0.7rem;
@@ -1442,6 +1469,26 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+        }
+        .problem-meta {
+            display: flex;
+            gap: 1.25rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--card-border);
+        }
+        .problem-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .problem-meta-item .meta-icon {
+            font-size: 0.9rem;
+        }
+        .problem-meta-item .meta-value {
+            font-weight: 600;
+            color: var(--text);
         }
 
         /* ============================================================
@@ -1546,16 +1593,16 @@
 
     <!-- Navigation -->
     <nav id="navbar">
-        <a href="#" class="nav-logo">AI4Change</a>
+        <a href="/" class="nav-logo">AI4Change</a>
         <div class="nav-links">
+            <a href="/">Home</a>
             <a href="/about.html">About</a>
             <a href="/manifesto.html">Manifesto</a>
-            <a href="#how">How it Works</a>
             <a href="/problems.html">Problems</a>
-            <a href="#faq">FAQ</a>
+            <a href="/contributors.html">Contributors</a>
             <a href="https://github.com/ai4change-org" target="_blank" rel="noopener">GitHub</a>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="theme-icon">&#9790;</span></button>
-            <a href="#involve" class="nav-cta">Join the Movement</a>
+            <a href="/#involve" class="nav-cta">Join the Movement</a>
         </div>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
             <span></span><span></span><span></span>
@@ -1564,13 +1611,13 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Home</a>
         <a href="/about.html">About</a>
         <a href="/manifesto.html">Manifesto</a>
-        <a href="#how" onclick="closeMobile()">How it Works</a>
         <a href="/problems.html">Problems</a>
-        <a href="#faq" onclick="closeMobile()">FAQ</a>
-        <a href="https://github.com/ai4change-org" target="_blank" rel="noopener">GitHub</a>
-        <a href="#involve" class="btn btn-primary" onclick="closeMobile()" style="margin-top:1rem;">Join the Movement</a>
+        <a href="/blog/">Blog</a>
+        <a href="/join.html">Join</a>
+        <a href="/join.html" class="btn btn-primary" style="margin-top:1rem;">Get Involved</a>
     </div>
 
     <!-- Hero -->
@@ -1578,6 +1625,7 @@
         <div class="hero-glow-1"></div>
         <div class="hero-glow-2"></div>
         <div class="hero-glow-3"></div>
+        <img src="/assets/hero-illustration.svg" alt="" class="hero-illustration" width="1400" height="600" loading="eager">
 
         <div class="hero-badge">Open Source &middot; Community Driven &middot; AI Powered</div>
 
@@ -1619,44 +1667,92 @@
         </div>
     </div>
 
-    <!-- Seed Problems -->
+    <!-- Trending Problems -->
     <section class="section problems-section" id="problems">
         <div class="problems-header reveal">
             <div class="section-label">Real Problems, Real Impact</div>
-            <h2 class="section-title">Seed Problems</h2>
-            <p class="section-subtitle">Five real challenges affecting millions. Each one solvable with AI + community. These are just the beginning.</p>
+            <h2 class="section-title">Trending Problems</h2>
+            <p class="section-subtitle">Real challenges submitted by real communities. Upvoted by the world. Each one solvable with AI + open-source collaboration.</p>
         </div>
 
         <div class="problems-grid">
             <div class="problem-card reveal reveal-delay-1">
-                <div class="problem-icon" style="background: rgba(0, 212, 170, 0.1);">&#x1F4A7;</div>
-                <h3>Water Quality Monitoring</h3>
-                <p>Billions drink unsafe water. AI-powered sensors and satellite imagery can detect contamination in real time, alerting communities before illness spreads.</p>
-                <span class="problem-tag" style="background: rgba(0, 212, 170, 0.1); color: var(--brand-primary); border: 1px solid rgba(0, 212, 170, 0.2);">Environment</span>
+                <div class="problem-icon" style="background: rgba(255, 107, 53, 0.1);">&#x1F33E;</div>
+                <h3>Crop Disease Detection for Smallholder Farmers</h3>
+                <p>Smallholder farmers lose up to 40% of crops to disease. Phone-camera AI can identify diseases instantly and suggest treatment &mdash; no agronomist needed.</p>
+                <div class="problem-tags">
+                    <span class="problem-tag" style="background: rgba(255, 107, 53, 0.1); color: var(--brand-accent); border: 1px solid rgba(255, 107, 53, 0.2);">&#x1F33E; Agriculture</span>
+                    <span class="problem-tag" style="background: rgba(0, 212, 170, 0.1); color: var(--brand-primary); border: 1px solid rgba(0, 212, 170, 0.2);">Africa</span>
+                </div>
+                <div class="problem-meta">
+                    <div class="problem-meta-item"><span class="meta-icon">&#x1F44D;</span> <span class="meta-value">47</span> upvotes</div>
+                    <div class="problem-meta-item"><span class="meta-icon">&#x1F465;</span> <span class="meta-value">12</span> contributors</div>
+                </div>
             </div>
             <div class="problem-card reveal reveal-delay-2">
-                <div class="problem-icon" style="background: rgba(255, 107, 53, 0.1);">&#x1F33E;</div>
-                <h3>Crop Disease Detection</h3>
-                <p>Smallholder farmers lose up to 40% of crops to disease. Phone-camera AI can identify diseases instantly and suggest treatment — no agronomist needed.</p>
-                <span class="problem-tag" style="background: rgba(255, 107, 53, 0.1); color: var(--brand-accent); border: 1px solid rgba(255, 107, 53, 0.2);">Agriculture</span>
+                <div class="problem-icon" style="background: rgba(0, 212, 170, 0.1);">&#x1F30A;</div>
+                <h3>Real-time Flood Early Warning for Coastal Communities</h3>
+                <p>Rising seas and extreme weather devastate Pacific Island communities with no warning. AI can fuse satellite, tide, and weather data to give hours of advance notice.</p>
+                <div class="problem-tags">
+                    <span class="problem-tag" style="background: rgba(0, 212, 170, 0.1); color: var(--brand-primary); border: 1px solid rgba(0, 212, 170, 0.2);">&#x1F30D; Environment</span>
+                    <span class="problem-tag" style="background: rgba(91, 141, 239, 0.1); color: #5B8DEF; border: 1px solid rgba(91, 141, 239, 0.2);">Pacific Islands</span>
+                </div>
+                <div class="problem-meta">
+                    <div class="problem-meta-item"><span class="meta-icon">&#x1F44D;</span> <span class="meta-value">38</span> upvotes</div>
+                    <div class="problem-meta-item"><span class="meta-icon">&#x1F465;</span> <span class="meta-value">8</span> contributors</div>
+                </div>
             </div>
             <div class="problem-card reveal reveal-delay-3">
-                <div class="problem-icon" style="background: rgba(124, 58, 237, 0.1);">&#x1F3E5;</div>
-                <h3>Medical Supply Tracking</h3>
-                <p>In remote regions, life-saving supplies vanish in transit. AI logistics can predict demand, optimize routes, and ensure medicine reaches those who need it.</p>
-                <span class="problem-tag" style="background: rgba(124, 58, 237, 0.1); color: var(--brand-secondary); border: 1px solid rgba(124, 58, 237, 0.2);">Health</span>
+                <div class="problem-icon" style="background: rgba(255, 60, 172, 0.1);">&#x1F4DA;</div>
+                <h3>AI-Powered Textbook Translation for Underserved Languages</h3>
+                <p>Half the world's children lack quality learning materials in their language. AI can translate and culturally adapt educational content at near-zero cost.</p>
+                <div class="problem-tags">
+                    <span class="problem-tag" style="background: rgba(255, 60, 172, 0.1); color: #FF3CAC; border: 1px solid rgba(255, 60, 172, 0.2);">&#x1F393; Education</span>
+                    <span class="problem-tag" style="background: rgba(124, 58, 237, 0.1); color: var(--brand-secondary); border: 1px solid rgba(124, 58, 237, 0.2);">Global</span>
+                </div>
+                <div class="problem-meta">
+                    <div class="problem-meta-item"><span class="meta-icon">&#x1F44D;</span> <span class="meta-value">35</span> upvotes</div>
+                    <div class="problem-meta-item"><span class="meta-icon">&#x1F465;</span> <span class="meta-value">15</span> contributors</div>
+                </div>
             </div>
             <div class="problem-card reveal reveal-delay-4">
-                <div class="problem-icon" style="background: rgba(255, 60, 172, 0.1);">&#x1F4DA;</div>
-                <h3>Education Content Generation</h3>
-                <p>Half the world's children lack quality learning materials in their language. AI can generate, translate, and adapt educational content at near-zero cost.</p>
-                <span class="problem-tag" style="background: rgba(255, 60, 172, 0.1); color: #FF3CAC; border: 1px solid rgba(255, 60, 172, 0.2);">Education</span>
+                <div class="problem-icon" style="background: rgba(0, 200, 83, 0.1);">&#x26A1;</div>
+                <h3>Micro-Grid Optimization for Off-Grid Communities</h3>
+                <p>Rural communities overpay for unreliable energy. AI can optimize solar microgrids, predict demand patterns, and distribute power efficiently across villages.</p>
+                <div class="problem-tags">
+                    <span class="problem-tag" style="background: rgba(0, 200, 83, 0.1); color: #00C853; border: 1px solid rgba(0, 200, 83, 0.2);">&#x26A1; Energy</span>
+                    <span class="problem-tag" style="background: rgba(255, 107, 53, 0.1); color: var(--brand-accent); border: 1px solid rgba(255, 107, 53, 0.2);">Sub-Saharan Africa</span>
+                </div>
+                <div class="problem-meta">
+                    <div class="problem-meta-item"><span class="meta-icon">&#x1F44D;</span> <span class="meta-value">29</span> upvotes</div>
+                    <div class="problem-meta-item"><span class="meta-icon">&#x1F465;</span> <span class="meta-value">6</span> contributors</div>
+                </div>
             </div>
             <div class="problem-card reveal reveal-delay-5">
-                <div class="problem-icon" style="background: rgba(0, 200, 83, 0.1);">&#x26A1;</div>
-                <h3>Community Energy Optimization</h3>
-                <p>Rural communities overpay for unreliable energy. AI can optimize microgrids, predict demand, and distribute solar/wind power efficiently across villages.</p>
-                <span class="problem-tag" style="background: rgba(0, 200, 83, 0.1); color: #00C853; border: 1px solid rgba(0, 200, 83, 0.2);">Energy</span>
+                <div class="problem-icon" style="background: rgba(124, 58, 237, 0.1);">&#x1F9E0;</div>
+                <h3>Mental Health Screening in Psychiatrist-Scarce Regions</h3>
+                <p>Regions with fewer than 1 psychiatrist per 100,000 people have no screening infrastructure. AI chatbots can provide initial assessments and connect people to care.</p>
+                <div class="problem-tags">
+                    <span class="problem-tag" style="background: rgba(124, 58, 237, 0.1); color: var(--brand-secondary); border: 1px solid rgba(124, 58, 237, 0.2);">&#x1F3E5; Health</span>
+                    <span class="problem-tag" style="background: rgba(255, 155, 53, 0.1); color: #FF9B35; border: 1px solid rgba(255, 155, 53, 0.2);">South Asia</span>
+                </div>
+                <div class="problem-meta">
+                    <div class="problem-meta-item"><span class="meta-icon">&#x1F44D;</span> <span class="meta-value">26</span> upvotes</div>
+                    <div class="problem-meta-item"><span class="meta-icon">&#x1F465;</span> <span class="meta-value">9</span> contributors</div>
+                </div>
+            </div>
+            <div class="problem-card reveal">
+                <div class="problem-icon" style="background: rgba(0, 212, 170, 0.1);">&#x1F4A7;</div>
+                <h3>Water Quality Monitoring for Rural Communities</h3>
+                <p>Billions drink unsafe water daily. AI-powered sensors and satellite imagery can detect contamination in real time, alerting communities before illness spreads.</p>
+                <div class="problem-tags">
+                    <span class="problem-tag" style="background: rgba(0, 212, 170, 0.1); color: var(--brand-primary); border: 1px solid rgba(0, 212, 170, 0.2);">&#x1F4A7; Water</span>
+                    <span class="problem-tag" style="background: rgba(91, 141, 239, 0.1); color: #5B8DEF; border: 1px solid rgba(91, 141, 239, 0.2);">Bangladesh</span>
+                </div>
+                <div class="problem-meta">
+                    <div class="problem-meta-item"><span class="meta-icon">&#x1F44D;</span> <span class="meta-value">22</span> upvotes</div>
+                    <div class="problem-meta-item"><span class="meta-icon">&#x1F465;</span> <span class="meta-value">5</span> contributors</div>
+                </div>
             </div>
         </div>
 
@@ -2164,7 +2260,7 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
-                <a href="#" class="nav-logo">AI4Change</a>
+                <a href="/" class="nav-logo">AI4Change</a>
                 <p>A global open-source movement where real people use AI as their instrument to solve humanity's most pressing problems. Together.</p>
             </div>
             <div class="footer-col">
@@ -2173,9 +2269,8 @@
                     <li><a href="/about.html">About</a></li>
                     <li><a href="/manifesto.html">Manifesto</a></li>
                     <li><a href="/problems.html">Problems</a></li>
-                    <li><a href="#how">How it Works</a></li>
-                    <li><a href="#involve">Get Involved</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/join.html">Join</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -2199,7 +2294,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Built with &#x2764;&#xFE0F; and AI &middot; &copy; 2026 AI4Change Contributors &middot; <a href="https://github.com/ai4change-org">MIT License</a></p>
+            <p>Built with &#x2764;&#xFE0F; by the community &middot; &copy; 2026 AI4Change Contributors &middot; <a href="https://github.com/ai4change-org">MIT License</a></p>
             <div class="footer-social">
                 <a href="https://github.com/ai4change-org" target="_blank" rel="noopener" aria-label="GitHub">
                     <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>

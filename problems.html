@@ -154,7 +154,11 @@
             background-clip: text;
             text-decoration: none;
             letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
+        .nav-logo-img { width: 32px; height: 32px; flex-shrink: 0; }
 
         .nav-links {
             display: flex;
@@ -992,7 +996,7 @@
 
     <!-- Navigation -->
     <nav id="navbar">
-        <a href="/" class="nav-logo">AI4Change</a>
+        <a href="/" class="nav-logo"><img src="/assets/favicon.svg" alt="" class="nav-logo-img" width="32" height="32">AI4Change</a>
         <div class="nav-links">
             <a href="/about.html">About</a>
             <a href="/manifesto.html">Manifesto</a>
@@ -1229,7 +1233,7 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
-                <a href="/" class="nav-logo">AI4Change</a>
+                <a href="/" class="nav-logo"><img src="/assets/favicon.svg" alt="" class="nav-logo-img" width="32" height="32">AI4Change</a>
                 <p>A global open-source movement where real people use AI as their instrument to solve humanity's most pressing problems. Together.</p>
             </div>
             <div class="footer-col">
