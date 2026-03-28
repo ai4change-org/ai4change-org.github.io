@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — AI4Change</title>
+    <meta name="description" content="The story behind AI4Change — a global open-source movement inspired by Playing for Change, using AI to solve real problems together.">
+    <meta property="og:title" content="About — AI4Change">
+    <meta property="og:description" content="The story behind AI4Change — a global open-source movement inspired by Playing for Change, using AI to solve real problems together.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai4change-org.github.io/about.html">
+    <meta property="og:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About — AI4Change">
+    <meta name="twitter:description" content="The story behind AI4Change — a global open-source movement inspired by Playing for Change, using AI to solve real problems together.">
+    <meta name="twitter:image" content="https://ai4change-org.github.io/assets/og-image.svg">
+    <meta name="twitter:site" content="@ai4changeorg">
+    <meta name="theme-color" content="#00D4AA">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/favicon.svg">
+    <meta name="keywords" content="AI4Change, about, mission, open source, AI, social impact, Playing for Change, community">
+    <meta name="author" content="AI4Change Contributors">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ai4change-org.github.io/about.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About AI4Change",
+        "description": "A global open-source movement inspired by Playing for Change, using AI to solve real problems together.",
+        "url": "https://ai4change-org.github.io/about.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "AI4Change",
+            "url": "https://ai4change-org.github.io"
+        },
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "AI4Change",
+            "url": "https://ai4change-org.github.io",
+            "founder": {
+                "@type": "Person",
+                "name": "Valter Silva",
+                "jobTitle": "Founder"
+            }
+        }
+    }
+    </script>
+
+    <style>
+        /* ============================================================
+           AI4CHANGE — About Page Styles
+           ============================================================ */
+        :root {
+            --brand-primary: #00D4AA;
+            --brand-secondary: #7C3AED;
+            --brand-accent: #FF6B35;
+            --brand-dark: #0A0E1A;
+            --brand-light: #F0FDF9;
+            --brand-muted: #94A3B8;
+            --gradient-hero: linear-gradient(135deg, #0A0E1A 0%, #1A1040 40%, #0D2847 100%);
+            --gradient-glow: linear-gradient(135deg, #00D4AA, #7C3AED);
+            --gradient-warm: linear-gradient(135deg, #FF6B35, #FF3CAC);
+            --section-padding: clamp(5rem, 12vw, 9rem);
+        }
+
+        [data-theme="dark"] {
+            --bg: #0A0E1A;
+            --text: #E2E8F0;
+            --text-muted: #94A3B8;
+            --card-bg: rgba(255,255,255,0.025);
+            --card-border: rgba(255,255,255,0.06);
+            --nav-bg: rgba(10, 14, 26, 0.6);
+            --nav-scrolled: rgba(10, 14, 26, 0.92);
+        }
+        [data-theme="light"] {
+            --bg: #FAFCFF;
+            --text: #1A202C;
+            --text-muted: #64748B;
+            --card-bg: rgba(0,0,0,0.02);
+            --card-border: rgba(0,0,0,0.08);
+            --nav-bg: rgba(250, 252, 255, 0.85);
+            --nav-scrolled: rgba(250, 252, 255, 0.95);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ============================================================
+           SCROLL ANIMATIONS
+           ============================================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* ============================================================
+           NAVIGATION
+           ============================================================ */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--nav-bg);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--card-border);
+            transition: all 0.4s;
+        }
+
+        nav.scrolled {
+            padding: 0.75rem 2rem;
+            background: var(--nav-scrolled);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .nav-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--brand-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-glow);
+            transition: width 0.3s;
+            border-radius: 1px;
+        }
+        .nav-links a:hover { color: #fff; }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active-link { color: var(--brand-primary); }
+        .nav-links a.active-link::after { width: 100%; }
+
+        .nav-cta {
+            background: var(--gradient-glow) !important;
+            color: var(--brand-dark) !important;
+            padding: 0.55rem 1.5rem;
+            border-radius: 100px;
+            font-weight: 600 !important;
+            transition: transform 0.3s, box-shadow 0.3s !important;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 212, 170, 0.35);
+        }
+
+        /* Mobile menu */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+            z-index: 1001;
+        }
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 14, 26, 0.98);
+            backdrop-filter: blur(24px);
+            z-index: 999;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a {
+            color: #E2E8F0;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .mobile-menu a:hover { color: var(--brand-primary); }
+
+        /* ============================================================
+           PARTICLE CANVAS
+           ============================================================ */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ============================================================
+           HERO
+           ============================================================ */
+        .hero {
+            min-height: 60vh;
+            background: var(--gradient-hero);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10rem 2rem 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-glow-1 {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 212, 170, 0.12), transparent 70%);
+            top: -150px;
+            right: -250px;
+            animation: heroFloat 12s ease-in-out infinite;
+            filter: blur(40px);
+        }
+        .hero-glow-2 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.1), transparent 70%);
+            bottom: -100px;
+            left: -150px;
+            animation: heroFloat 16s ease-in-out infinite reverse;
+            filter: blur(40px);
+        }
+        .hero-glow-3 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.08), transparent 70%);
+            top: 30%;
+            left: 15%;
+            animation: heroFloat 10s ease-in-out infinite 2s;
+            filter: blur(30px);
+        }
+
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-40px) scale(1.08); }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(0, 212, 170, 0.08);
+            border: 1px solid rgba(0, 212, 170, 0.2);
+            padding: 0.6rem 1.5rem;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--brand-primary);
+            margin-bottom: 2.5rem;
+            position: relative;
+            z-index: 1;
+            animation: badgePulse 3s ease-in-out infinite;
+        }
+        @keyframes badgePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 170, 0.1); }
+            50% { box-shadow: 0 0 0 12px rgba(0, 212, 170, 0); }
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.03em;
+        }
+
+        .gradient-text {
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: var(--brand-muted);
+            max-width: 700px;
+            line-height: 1.75;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================================
+           BUTTONS
+           ============================================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2.25rem;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--gradient-glow);
+            color: var(--brand-dark);
+            box-shadow: 0 4px 20px rgba(0, 212, 170, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 212, 170, 0.4);
+        }
+
+        .btn-ghost {
+            background: rgba(255,255,255,0.06);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-2px);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .btn-accent {
+            background: var(--gradient-warm);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        }
+        .btn-accent:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #7C3AED, #5B21B6);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+        }
+        .btn-secondary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(124, 58, 237, 0.4);
+        }
+
+        /* ============================================================
+           SECTIONS — Shared
+           ============================================================ */
+        .section {
+            padding: var(--section-padding) 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--brand-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .section-label::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 2px;
+            background: var(--brand-primary);
+            border-radius: 1px;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4.5vw, 3.25rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.12;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            color: var(--brand-muted);
+            font-size: 1.15rem;
+            max-width: 620px;
+            line-height: 1.7;
+            margin-bottom: 3.5rem;
+        }
+
+        /* ============================================================
+           STORY SECTION
+           ============================================================ */
+        .story-section {
+            background: linear-gradient(180deg, transparent, rgba(124, 58, 237, 0.04) 50%, transparent);
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.85;
+            margin-bottom: 1.75rem;
+        }
+
+        .story-content p:first-of-type {
+            font-size: 1.25rem;
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .story-content .highlight {
+            color: var(--brand-primary);
+            font-weight: 600;
+        }
+
+        .story-content .highlight-violet {
+            color: var(--brand-secondary);
+            font-weight: 600;
+        }
+
+        .story-content .highlight-coral {
+            color: var(--brand-accent);
+            font-weight: 600;
+        }
+
+        .story-quote {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.3rem, 3vw, 1.65rem);
+            font-weight: 600;
+            line-height: 1.6;
+            color: #E2E8F0;
+            margin: 3rem 0;
+            padding: 2rem 2.5rem;
+            position: relative;
+            border-left: 3px solid;
+            border-image: var(--gradient-glow) 1;
+            background: rgba(0, 212, 170, 0.03);
+            border-radius: 0 16px 16px 0;
+        }
+
+        /* ============================================================
+           PRINCIPLES SECTION
+           ============================================================ */
+        .principles-section {
+            background: linear-gradient(180deg, transparent, rgba(0, 212, 170, 0.03) 50%, transparent);
+        }
+
+        .principles-header { text-align: center; margin-bottom: 4rem; }
+        .principles-header .section-label { justify-content: center; }
+        .principles-header .section-label::before { display: none; }
+        .principles-header .section-subtitle { margin: 0 auto; }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .principle-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .principle-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            border-radius: 24px 24px 0 0;
+        }
+        .principle-card:nth-child(1)::before { background: var(--gradient-glow); }
+        .principle-card:nth-child(2)::before { background: linear-gradient(135deg, #7C3AED, #5B8DEF); }
+        .principle-card:nth-child(3)::before { background: var(--gradient-warm); }
+        .principle-card:nth-child(4)::before { background: linear-gradient(135deg, #FF3CAC, #7C3AED); }
+
+        .principle-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .principle-card:nth-child(1)::after { background: linear-gradient(135deg, rgba(0, 212, 170, 0.05), transparent); }
+        .principle-card:nth-child(2)::after { background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), transparent); }
+        .principle-card:nth-child(3)::after { background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), transparent); }
+        .principle-card:nth-child(4)::after { background: linear-gradient(135deg, rgba(255, 60, 172, 0.05), transparent); }
+        .principle-card:hover::after { opacity: 1; }
+
+        .principle-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.3);
+        }
+
+        .principle-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        .principle-card:nth-child(1) .principle-icon {
+            background: rgba(0, 212, 170, 0.1);
+            border: 1px solid rgba(0, 212, 170, 0.2);
+        }
+        .principle-card:nth-child(2) .principle-icon {
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+        }
+        .principle-card:nth-child(3) .principle-icon {
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+        .principle-card:nth-child(4) .principle-icon {
+            background: rgba(255, 60, 172, 0.1);
+            border: 1px solid rgba(255, 60, 172, 0.2);
+        }
+
+        .principle-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .principle-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================================
+           TEAM SECTION
+           ============================================================ */
+        .team-section {
+            background: linear-gradient(180deg, transparent, rgba(124, 58, 237, 0.03) 50%, transparent);
+        }
+
+        .team-header { text-align: center; margin-bottom: 4rem; }
+        .team-header .section-label { justify-content: center; }
+        .team-header .section-label::before { display: none; }
+        .team-header .section-subtitle { margin: 0 auto; }
+
+        .team-grid {
+            display: flex;
+            justify-content: center;
+        }
+
+        .team-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-glow);
+            border-radius: 24px 24px 0 0;
+        }
+
+        .team-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(0, 212, 170, 0.04), rgba(124, 58, 237, 0.03));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .team-card:hover::after { opacity: 1; }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.3);
+            border-color: rgba(0, 212, 170, 0.2);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(135deg, rgba(0, 212, 170, 0.15), rgba(124, 58, 237, 0.15));
+            border: 2px solid rgba(0, 212, 170, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .team-avatar svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .team-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-role {
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.25rem;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-bio {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-links {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-muted);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .team-links a:hover {
+            background: rgba(0, 212, 170, 0.1);
+            border-color: rgba(0, 212, 170, 0.2);
+            color: var(--brand-primary);
+        }
+        .team-links a svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .team-join-cta {
+            margin-top: 3rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-join-cta p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ============================================================
+           TIMELINE SECTION
+           ============================================================ */
+        .timeline-section {
+            background: linear-gradient(180deg, transparent, rgba(255, 107, 53, 0.03) 50%, transparent);
+        }
+
+        .timeline-header { text-align: center; margin-bottom: 4rem; }
+        .timeline-header .section-label { justify-content: center; }
+        .timeline-header .section-label::before { display: none; }
+        .timeline-header .section-subtitle { margin: 0 auto; }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 18px;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--brand-primary), var(--brand-secondary), var(--brand-accent), #FF3CAC, var(--brand-primary));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 3rem;
+        }
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -3rem;
+            top: 6px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 3px solid;
+            background: var(--bg);
+            z-index: 2;
+            transform: translateX(7.5px);
+            transition: all 0.3s;
+        }
+
+        .timeline-item:nth-child(1) .timeline-dot { border-color: var(--brand-primary); box-shadow: 0 0 12px rgba(0, 212, 170, 0.4); background: var(--brand-primary); }
+        .timeline-item:nth-child(2) .timeline-dot { border-color: #5B8DEF; box-shadow: 0 0 12px rgba(91, 141, 239, 0.3); background: #5B8DEF; }
+        .timeline-item:nth-child(3) .timeline-dot { border-color: var(--brand-secondary); box-shadow: 0 0 12px rgba(124, 58, 237, 0.3); }
+        .timeline-item:nth-child(4) .timeline-dot { border-color: var(--brand-accent); box-shadow: 0 0 12px rgba(255, 107, 53, 0.3); }
+        .timeline-item:nth-child(5) .timeline-dot { border-color: #FF3CAC; box-shadow: 0 0 12px rgba(255, 60, 172, 0.3); }
+
+        .timeline-content {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            transition: all 0.3s;
+        }
+
+        .timeline-content:hover {
+            border-color: rgba(0, 212, 170, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-date {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .timeline-item:nth-child(1) .timeline-date { color: var(--brand-primary); }
+        .timeline-item:nth-child(2) .timeline-date { color: #5B8DEF; }
+        .timeline-item:nth-child(3) .timeline-date { color: var(--brand-secondary); }
+        .timeline-item:nth-child(4) .timeline-date { color: var(--brand-accent); }
+        .timeline-item:nth-child(5) .timeline-date { color: #FF3CAC; }
+
+        .timeline-content h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.65;
+        }
+
+        .timeline-status {
+            display: inline-block;
+            padding: 0.2rem 0.7rem;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.75rem;
+        }
+        .status-done {
+            background: rgba(0, 212, 170, 0.1);
+            color: var(--brand-primary);
+            border: 1px solid rgba(0, 212, 170, 0.2);
+        }
+        .status-active {
+            background: rgba(91, 141, 239, 0.1);
+            color: #5B8DEF;
+            border: 1px solid rgba(91, 141, 239, 0.2);
+            animation: badgePulse 3s ease-in-out infinite;
+        }
+        .status-upcoming {
+            background: rgba(255,255,255,0.04);
+            color: var(--text-muted);
+            border: 1px solid var(--card-border);
+        }
+
+        /* ============================================================
+           CTA SECTION
+           ============================================================ */
+        .cta-section {
+            text-align: center;
+            padding: var(--section-padding) 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(0, 212, 170, 0.06), transparent 70%);
+        }
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.08), transparent 70%);
+            top: -100px;
+            right: -100px;
+            filter: blur(40px);
+        }
+
+        .cta-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-section > p {
+            color: var(--brand-muted);
+            font-size: 1.15rem;
+            max-width: 560px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.65;
+            position: relative;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        footer {
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem 3rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-brand .nav-logo {
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 1.35rem;
+        }
+        .footer-brand p {
+            color: var(--brand-muted);
+            font-size: 0.9rem;
+            line-height: 1.65;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #E2E8F0;
+            margin-bottom: 1.25rem;
+        }
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        .footer-col a {
+            color: var(--brand-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-col a:hover { color: var(--brand-primary); }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid rgba(255,255,255,0.04);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-bottom p {
+            color: var(--brand-muted);
+            font-size: 0.8rem;
+        }
+        .footer-bottom a {
+            color: var(--brand-primary);
+            text-decoration: none;
+        }
+        .footer-bottom a:hover { text-decoration: underline; }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        .footer-social a {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-muted);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .footer-social a:hover {
+            background: rgba(0, 212, 170, 0.1);
+            border-color: rgba(0, 212, 170, 0.2);
+            color: var(--brand-primary);
+        }
+        .footer-social a svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* ============================================================
+           THEME TOGGLE
+           ============================================================ */
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--card-border);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: border-color 0.3s, transform 0.3s;
+            color: var(--text-muted);
+        }
+        .theme-toggle:hover { border-color: var(--brand-primary); transform: rotate(30deg); }
+
+        /* ============================================================
+           LIGHT MODE OVERRIDES
+           ============================================================ */
+        [data-theme="light"] .hero { background: linear-gradient(135deg, #F0FDF9 0%, #EDE9FE 40%, #E0F2FE 100%); }
+        [data-theme="light"] .hero h1 { color: var(--brand-dark); }
+        [data-theme="light"] .mobile-toggle span { background: var(--text); }
+        [data-theme="light"] .mobile-menu { background: rgba(250, 252, 255, 0.98); }
+        [data-theme="light"] .mobile-menu a { color: var(--text); }
+        [data-theme="light"] .principle-card { background: var(--card-bg); border-color: var(--card-border); }
+        [data-theme="light"] .principle-card:hover { box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08); }
+        [data-theme="light"] .team-card { background: var(--card-bg); border-color: var(--card-border); }
+        [data-theme="light"] .team-card:hover { box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08); }
+        [data-theme="light"] .timeline-content { background: var(--card-bg); border-color: var(--card-border); }
+        [data-theme="light"] .timeline-content:hover { box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06); }
+        [data-theme="light"] .timeline-dot { background: var(--bg); }
+        [data-theme="light"] .timeline-item:nth-child(1) .timeline-dot { background: var(--brand-primary); }
+        [data-theme="light"] .timeline-item:nth-child(2) .timeline-dot { background: #5B8DEF; }
+        [data-theme="light"] .story-quote { color: var(--text); }
+        [data-theme="light"] .story-content p:first-of-type { color: var(--text); }
+        [data-theme="light"] .btn-ghost { background: rgba(0,0,0,0.04); color: var(--text); border-color: rgba(0,0,0,0.1); }
+        [data-theme="light"] .btn-ghost:hover { background: rgba(0,0,0,0.08); }
+        [data-theme="light"] .team-links a { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.08); }
+        [data-theme="light"] .team-links a:hover { background: rgba(0, 212, 170, 0.08); }
+        [data-theme="light"] #particles-canvas { opacity: 0.3; }
+        [data-theme="light"] .footer-col h4 { color: var(--text); }
+        [data-theme="light"] .status-upcoming { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.08); }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 1024px) {
+            .principles-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: flex; }
+
+            .hero { padding: 7rem 1.5rem 4rem; }
+            .hero h1 { font-size: clamp(2.2rem, 8vw, 3.2rem); }
+            .hero-subtitle { font-size: 1.05rem; }
+
+            .section { padding: clamp(3rem, 8vw, 5rem) 1.5rem; }
+            .section-title { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+
+            .principles-grid { grid-template-columns: 1fr; }
+
+            .story-content p { font-size: 1rem; }
+            .story-content p:first-of-type { font-size: 1.1rem; }
+            .story-quote { font-size: 1.15rem; padding: 1.5rem 1.75rem; }
+
+            .timeline { padding-left: 2.5rem; }
+            .timeline-dot { left: -2.5rem; transform: translateX(7.5px); }
+            .timeline-content { padding: 1.25rem 1.5rem; }
+
+            .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            nav { padding: 0.75rem 1rem; }
+            .hero { padding: 6rem 1rem 3rem; }
+            .hero-badge { font-size: 0.75rem; padding: 0.4rem 1rem; }
+            .btn { padding: 0.85rem 1.75rem; font-size: 0.9rem; }
+            .cta-actions { flex-direction: column; align-items: center; }
+            .principle-card { padding: 2rem 1.5rem; }
+            .team-card { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="/" class="nav-logo">AI4Change</a>
+        <div class="nav-links">
+            <a href="/about.html" class="active-link">About</a>
+            <a href="/manifesto.html">Manifesto</a>
+            <a href="/problems.html">Problems</a>
+            <a href="/#how">How it Works</a>
+            <a href="https://github.com/ai4change-org" target="_blank" rel="noopener">GitHub</a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="theme-icon">&#9790;</span></button>
+            <a href="/#involve" class="nav-cta">Join the Movement</a>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/about.html">About</a>
+        <a href="/manifesto.html">Manifesto</a>
+        <a href="/problems.html">Problems</a>
+        <a href="/#how">How it Works</a>
+        <a href="https://github.com/ai4change-org" target="_blank" rel="noopener">GitHub</a>
+        <a href="/#involve" class="btn btn-primary" style="margin-top:1rem;">Join the Movement</a>
+    </div>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero">
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+        <div class="hero-glow-3"></div>
+
+        <div class="hero-badge reveal">Our Story &middot; Our Mission &middot; Our People</div>
+
+        <h1 class="reveal reveal-delay-1">
+            About <span class="gradient-text">AI4Change</span>
+        </h1>
+
+        <p class="hero-subtitle reveal reveal-delay-2">
+            A community-driven open-source movement where real people from every corner of the world wield AI as their instrument to solve humanity's most pressing problems. Together. In the open.
+        </p>
+    </section>
+
+    <!-- ============================================================
+         THE FULL STORY
+         ============================================================ -->
+    <div class="story-section">
+        <section class="section">
+            <div class="section-label reveal">Our Origin</div>
+            <h2 class="section-title reveal reveal-delay-1">The Full Story</h2>
+
+            <div class="story-content">
+                <p class="reveal reveal-delay-2">
+                    It started with a YouTube video. A street musician in New Orleans, singing "Stand by Me." Then another musician joins in from Barcelona. Then another from the slums of Mumbai. Then Moscow. Then the Congo. Different languages, different instruments, different lives &mdash; but one voice. One song that somehow made the world feel smaller and more connected than any technology ever had.
+                </p>
+
+                <p class="reveal">
+                    That was <span class="highlight-coral">Playing for Change</span> &mdash; a movement that proved something radical: that ordinary people scattered across the globe, connected by nothing more than a shared purpose and an open invitation, could create something extraordinary. Not a corporation. Not an institution. A <span class="highlight">movement</span>.
+                </p>
+
+                <div class="story-quote reveal">
+                    What if we could do the same thing with problem-solving? What if AI could be the instrument that connects a farmer in Kenya, a data scientist in Berlin, and a student in Sao Paulo &mdash; all working together on the same problem, in the open?
+                </div>
+
+                <p class="reveal">
+                    That question wouldn't go away. Because the parallels were too perfect to ignore. Playing for Change uses <span class="highlight-coral">music as the universal language</span>. AI4Change uses <span class="highlight">AI as the universal tool</span>. PFC connects musicians who've never met to play one song together. AI4Change connects problem-solvers who've never met to build one solution together.
+                </p>
+
+                <p class="reveal">
+                    But here's what makes this moment different from any other in history: <span class="highlight-violet">AI is the great equalizer</span>. For the first time ever, a teenager in rural Indonesia has access to the same cognitive horsepower as an engineer at a Fortune 500 company. A community organizer in Lagos can build the same sophisticated data pipeline as a Silicon Valley startup. The playing field hasn't just been leveled &mdash; it's been obliterated.
+                </p>
+
+                <p class="reveal">
+                    And yet, most of the world's biggest problems &mdash; climate adaptation, healthcare access, educational equity, food security &mdash; are still being "solved" by the same small group of institutions, in the same closed rooms, with the same blind spots. The people closest to these problems, the ones who understand them in their bones, are rarely at the table.
+                </p>
+
+                <p class="reveal">
+                    <span class="highlight">AI4Change exists to change that equation.</span> We don't start with technology. We start with problems &mdash; real problems, submitted by real people who live them every day. Then we open-source the entire process of solving them, using AI as the bridge that lets anyone, anywhere, contribute meaningfully. The farmer who understands the soil. The doctor who sees the patterns. The student with the fresh perspective. The AI that connects them all.
+                </p>
+
+                <p class="reveal">
+                    This is not a company. It's not a product. It's an open invitation to anyone who believes that the most powerful solutions emerge when the whole world gets to participate in building them.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- ============================================================
+         OUR PRINCIPLES
+         ============================================================ -->
+    <div class="principles-section">
+        <section class="section">
+            <div class="principles-header">
+                <div class="section-label reveal">What We Believe</div>
+                <h2 class="section-title reveal reveal-delay-1">Our Principles</h2>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    These aren't corporate values on a poster. They're the design constraints that shape every decision we make.
+                </p>
+            </div>
+
+            <div class="principles-grid">
+                <div class="principle-card reveal reveal-delay-1">
+                    <div class="principle-icon">&#127919;</div>
+                    <h3>Problems First</h3>
+                    <p>We don't start with a solution looking for a problem. We start with real, painful, urgent problems submitted by the people who live them. The technology follows the need, never the other way around. Every project begins with a human story, not a feature spec.</p>
+                </div>
+
+                <div class="principle-card reveal reveal-delay-2">
+                    <div class="principle-icon">&#128275;</div>
+                    <h3>Radically Open</h3>
+                    <p>Every dataset, every model, every line of code, every conversation &mdash; open. Not because it's trendy, but because closed solutions to shared problems are a contradiction. The best ideas don't come from gatekeeping. They come from letting the world in.</p>
+                </div>
+
+                <div class="principle-card reveal reveal-delay-3">
+                    <div class="principle-icon">&#9878;&#65039;</div>
+                    <h3>AI as Equalizer</h3>
+                    <p>AI isn't a luxury for the privileged. It's the tool that finally lets a community health worker in rural India have the same analytical power as a research lab. We build so that AI amplifies the voices that have always been closest to the problems but furthest from the resources.</p>
+                </div>
+
+                <div class="principle-card reveal reveal-delay-4">
+                    <div class="principle-icon">&#128214;</div>
+                    <h3>Stories Matter</h3>
+                    <p>Every solution we build is documented as a story &mdash; filmed, written, shared. Because the most powerful thing about Playing for Change wasn't the music alone. It was seeing the musician's face, knowing their name, understanding their world. We do the same for problem-solvers.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ============================================================
+         TEAM
+         ============================================================ -->
+    <div class="team-section">
+        <section class="section">
+            <div class="team-header">
+                <div class="section-label reveal">The Humans</div>
+                <h2 class="section-title reveal reveal-delay-1">Who's Behind This</h2>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Every movement starts with someone stubborn enough to begin. This one started with a single question and a GitHub org.
+                </p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card reveal reveal-delay-1">
+                    <div class="team-avatar">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00D4AA;stop-opacity:0.25" />
+                                    <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0.25" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="60" cy="60" r="60" fill="url(#avatarGrad)" />
+                            <text x="60" y="68" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="36" font-weight="700" fill="#00D4AA">VS</text>
+                        </svg>
+                    </div>
+                    <h3>Valter Silva</h3>
+                    <span class="team-role">Founder</span>
+                    <p class="team-bio">
+                        A technologist who has spent years building software and leading engineering teams, but couldn't shake the feeling that AI's greatest potential isn't in optimizing ad clicks &mdash; it's in giving ordinary people extraordinary tools to solve the problems they care about most. AI4Change is the answer to that restlessness.
+                    </p>
+                    <div class="team-links">
+                        <a href="https://github.com/valter-silva-au" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/in/valter-silva-au" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-join-cta reveal">
+                <p>AI4Change is looking for co-conspirators &mdash; designers, engineers, storytellers, domain experts, community organizers. If you believe AI should serve humanity, not just shareholders, there's a seat at this table with your name on it.</p>
+                <a href="https://github.com/orgs/ai4change-org/discussions" class="btn btn-ghost" target="_blank" rel="noopener">Introduce Yourself</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- ============================================================
+         TIMELINE
+         ============================================================ -->
+    <div class="timeline-section">
+        <section class="section">
+            <div class="timeline-header">
+                <div class="section-label reveal">The Road Ahead</div>
+                <h2 class="section-title reveal reveal-delay-1">Our Journey</h2>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Every movement has a timeline. Here's ours &mdash; from the first spark to the first solutions shipped.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026 Q1</span>
+                        <h3>The Idea is Born</h3>
+                        <p>A late-night YouTube rabbit hole leads from Playing for Change to a question that won't go away: what if AI could connect problem-solvers the way music connects musicians? The vision crystallizes.</p>
+                        <span class="timeline-status status-done">Completed</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal reveal-delay-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026 Q1</span>
+                        <h3>GitHub Org Created</h3>
+                        <p>The AI4Change GitHub organization goes live. Website launched. The manifesto is written. The problems repo is created. The open invitation begins.</p>
+                        <span class="timeline-status status-active">In Progress</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal reveal-delay-2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026 Q2</span>
+                        <h3>First Seed Problems Posted</h3>
+                        <p>The first five community-submitted problems are posted, triaged, and opened for contribution. Problem champions are assigned. The flywheel begins to turn.</p>
+                        <span class="timeline-status status-upcoming">Upcoming</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal reveal-delay-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026 Q3</span>
+                        <h3>First Pilot Project</h3>
+                        <p>The first AI4Change pilot project launches &mdash; a real solution, built by a global team, solving a real problem, documented as a story for the world to see.</p>
+                        <span class="timeline-status status-upcoming">Upcoming</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal reveal-delay-4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026 Q4</span>
+                        <h3>Foundation Established</h3>
+                        <p>AI4Change transitions from a GitHub org to a formal open-source foundation &mdash; with governance, funding channels, and a sustainable structure to support the growing community of contributors.</p>
+                        <span class="timeline-status status-upcoming">Upcoming</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ============================================================
+         FINAL CTA
+         ============================================================ -->
+    <section class="cta-section reveal">
+        <h2>Join the <span class="gradient-text">Founding Team</span></h2>
+        <p>The movement is just beginning. The problems are real. The tools are ready. The only missing piece is you.</p>
+        <div class="cta-actions">
+            <a href="https://github.com/ai4change-org/problems/issues/new" class="btn btn-primary" target="_blank" rel="noopener">Submit a Problem</a>
+            <a href="https://github.com/ai4change-org" class="btn btn-secondary" target="_blank" rel="noopener">Star on GitHub</a>
+            <a href="https://github.com/orgs/ai4change-org/discussions" class="btn btn-ghost" target="_blank" rel="noopener">Start a Discussion</a>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="/" class="nav-logo">AI4Change</a>
+                <p>A global open-source movement where real people use AI as their instrument to solve humanity's most pressing problems. Together.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Movement</h4>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/manifesto.html">Manifesto</a></li>
+                    <li><a href="/problems.html">Problems</a></li>
+                    <li><a href="/#how">How it Works</a></li>
+                    <li><a href="/#involve">Get Involved</a></li>
+                    <li><a href="/#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Build</h4>
+                <ul>
+                    <li><a href="https://github.com/ai4change-org/problems/issues" target="_blank" rel="noopener">Problems Board</a></li>
+                    <li><a href="https://github.com/ai4change-org" target="_blank" rel="noopener">GitHub Org</a></li>
+                    <li><a href="https://github.com/orgs/ai4change-org/discussions" target="_blank" rel="noopener">Discussions</a></li>
+                    <li><a href="https://github.com/ai4change-org/problems/issues/new" target="_blank" rel="noopener">Submit a Problem</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://github.com/ai4change-org" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://twitter.com/ai4changeorg" target="_blank" rel="noopener">X / Twitter</a></li>
+                    <li><a href="https://linkedin.com/company/ai4change" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://youtube.com/@ai4change" target="_blank" rel="noopener">YouTube</a></li>
+                    <li><a href="https://discord.gg/ai4change" target="_blank" rel="noopener">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Built with &#x2764;&#xFE0F; and AI &middot; &copy; 2026 AI4Change Contributors &middot; <a href="https://github.com/ai4change-org">MIT License</a></p>
+            <div class="footer-social">
+                <a href="https://github.com/ai4change-org" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="https://twitter.com/ai4changeorg" target="_blank" rel="noopener" aria-label="Twitter">
+                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://linkedin.com/company/ai4change" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://youtube.com/@ai4change" target="_blank" rel="noopener" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         JAVASCRIPT
+         ============================================================ -->
+    <script>
+    (function() {
+        'use strict';
+
+        // ---- Particle Background ----
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animFrame;
+        let w, h;
+
+        function resize() {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * w;
+                this.y = Math.random() * h;
+                this.vx = (Math.random() - 0.5) * 0.3;
+                this.vy = (Math.random() - 0.5) * 0.3;
+                this.r = Math.random() * 1.5 + 0.5;
+                this.alpha = Math.random() * 0.4 + 0.1;
+                const colors = ['0, 212, 170', '124, 58, 237', '255, 107, 53'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > w) this.vx *= -1;
+                if (this.y < 0 || this.y > h) this.vy *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            const count = Math.min(Math.floor((w * h) / 18000), 80);
+            particles = [];
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function drawLines() {
+            const maxDist = 150;
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < maxDist) {
+                        const opacity = (1 - dist / maxDist) * 0.12;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(0, 212, 170, ${opacity})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, w, h);
+            particles.forEach(p => { p.update(); p.draw(); });
+            drawLines();
+            animFrame = requestAnimationFrame(animate);
+        }
+
+        resize();
+        initParticles();
+        animate();
+        window.addEventListener('resize', () => { resize(); initParticles(); });
+
+        // ---- Scroll Reveal ----
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // ---- Navbar scroll effect ----
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+
+        // ---- Mobile menu ----
+        window.closeMobile = function() {
+            document.getElementById('mobileMenu').classList.remove('active');
+            document.getElementById('mobileToggle').classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            const isActive = menu.classList.toggle('active');
+            this.classList.toggle('active');
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobileMenu a').forEach(a => {
+            a.addEventListener('click', closeMobile);
+        });
+
+        // ---- Smooth scroll for anchor links ----
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = navbar.offsetHeight + 16;
+                    const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ---- Dark/Light Theme Toggle ----
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        function updateIcon() {
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            document.querySelectorAll('.theme-icon').forEach(el => {
+                el.textContent = isDark ? '\u263E' : '\u2600';
+            });
+        }
+
+        function toggleTheme() {
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('ai4c-theme', next);
+            updateIcon();
+        }
+
+        const savedTheme = localStorage.getItem('ai4c-theme');
+        if (savedTheme) html.setAttribute('data-theme', savedTheme);
+        updateIcon();
+        if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+
+    })();
+
+    // ---- Service Worker Registration ----
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+    }
+    </script>
+
+</body>
+</html>
