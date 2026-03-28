@@ -154,6 +154,7 @@
         .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0, 212, 170, 0.35); }
 
         .mobile-toggle {
+            min-width: 44px; min-height: 44px; align-items: center; justify-content: center;
             display: none;
             flex-direction: column;
             gap: 5px;
@@ -453,7 +454,8 @@
             text-transform: uppercase; letter-spacing: 0.1em; color: #E2E8F0; margin-bottom: 1.25rem;
         }
         .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-        .footer-col a { color: var(--brand-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        .footer-col a {
+            display: inline-block; padding: 0.3rem 0; min-height: 44px; line-height: 1.8; color: var(--brand-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
         .footer-col a:hover { color: var(--brand-primary); }
         .footer-bottom {
             max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem;
@@ -465,6 +467,7 @@
         .footer-bottom a:hover { text-decoration: underline; }
         .footer-social { display: flex; gap: 1rem; }
         .footer-social a {
+            min-width: 44px; min-height: 44px;
             width: 36px; height: 36px; border-radius: 10px;
             background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
             display: flex; align-items: center; justify-content: center;
@@ -512,7 +515,8 @@
         }
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .mobile-toggle { display: flex; }
+            .mobile-toggle {
+            min-width: 44px; min-height: 44px; align-items: center; justify-content: center; display: flex; }
             .hero { padding: 7rem 1.5rem 4rem; }
             .hero h1 { font-size: clamp(2.2rem, 8vw, 3.2rem); }
             .roles-grid { grid-template-columns: 1fr; }

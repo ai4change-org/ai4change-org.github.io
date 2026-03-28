@@ -206,6 +206,7 @@
 
         /* Mobile menu */
         .mobile-toggle {
+            min-width: 44px; min-height: 44px; align-items: center; justify-content: center;
             display: none;
             flex-direction: column;
             gap: 5px;
@@ -608,7 +609,7 @@
             display: inline-block;
             padding: 0.25rem 0.85rem;
             border-radius: 100px;
-            font-size: 0.72rem;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -625,7 +626,7 @@
             gap: 0.35rem;
             padding: 0.2rem 0.75rem;
             border-radius: 100px;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.04em;
@@ -752,7 +753,7 @@
 
         .how-step-number {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.15em;
@@ -859,6 +860,7 @@
             gap: 0.6rem;
         }
         .footer-col a {
+            display: inline-block; padding: 0.3rem 0; min-height: 44px; line-height: 1.8;
             color: var(--brand-muted);
             text-decoration: none;
             font-size: 0.9rem;
@@ -892,6 +894,7 @@
             gap: 1rem;
         }
         .footer-social a {
+            min-width: 44px; min-height: 44px;
             width: 36px;
             height: 36px;
             border-radius: 10px;
@@ -981,7 +984,8 @@
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .mobile-toggle { display: flex; }
+            .mobile-toggle {
+            min-width: 44px; min-height: 44px; align-items: center; justify-content: center; display: flex; }
 
             .hero { padding: 6rem 1.5rem 4rem; }
             .hero h1 { font-size: clamp(2.2rem, 8vw, 3.2rem); }
