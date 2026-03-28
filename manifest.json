@@ -1,0 +1,24 @@
+{
+  "name": "AI4Change — AI as the Great Equalizer",
+  "short_name": "AI4Change",
+  "description": "A global open-source movement where real people use AI to solve humanity's most pressing problems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0E1A",
+  "theme_color": "#00D4AA",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/logo.svg",
+      "sizes": "200x200",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
